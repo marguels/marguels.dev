@@ -1,4 +1,5 @@
 "use client";
+import styles from "./header.module.css"
 import { useEffect } from "react";
 
 export default function ScrollProgress() {
@@ -29,7 +30,7 @@ export default function ScrollProgress() {
   return (
     <div
       id="scrollbar"
-      className="scrollbar"
+      className={styles.scrollbar}
     ></div>
   );
 }

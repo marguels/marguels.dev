@@ -1,7 +1,7 @@
 import { getPostContent, getPostMetadata } from "../../../lib/posts";
 import Link from "next/link";
 import "katex/dist/katex.min.css";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/sidebar/Sidebar";
 
 const PostPage = async (props: any) => {
   const slug = props.params.slug;

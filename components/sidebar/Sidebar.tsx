@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import { TableOfContents } from "@/interfaces/post";
+import { TocItem } from "@/interfaces/post";
+import styles from './sidebar.module.css';
 
 interface SidebarProps {
-  toc: TableOfContents[];
+  toc: TocItem[];
 }
 
 const handleClick = (id: string, event: React.MouseEvent) => {
@@ -51,18 +52,23 @@ const Sidebar = ({ toc }: SidebarProps) => {
   }, [toc]);
 
   return (
-    <div className="sidebar">
-      {toc.map((heading, index) => (
+    <div className={styles.sidebarContainer}>
+    {toc.map((heading, index) => {
+      // const headingClass = `sideButtonH${heading.depth + 1}`;
+      const headingClass = `side-button-h${heading.depth + 1}`;
+
+      return (
         <a
           href={`#${heading.id}`}
           key={index}
           onClick={(event) => handleClick(heading.id, event)}
-          className={heading.id === activeId ? 'active-side-button' : ''}
+          className={`${styles.sidebarButton} ${heading.id === activeId ? styles.activeSideButton : ''} ${styles[headingClass]}`}
         >
           {heading.text}
         </a>
-      ))}
-    </div>
+      );
+    })}
+  </div>
   );
 };
 

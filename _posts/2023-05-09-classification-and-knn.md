@@ -7,8 +7,6 @@ description:
 categories: data-science machine-learning
 giscus_comments: true
 related_posts: false
-toc:
-  sidebar: left
 ---
 
 # Classification problems

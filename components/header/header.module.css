@@ -1,0 +1,36 @@
+.headerContainer {
+    background-color: var(--alt-background);
+    position: sticky;
+    top:0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .navbar {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar h1 {
+    padding: 0.2rem 0.8rem;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar ul>li {
+    margin: 0.2rem 0.5rem;
+  }
+
+  .scrollbar {
+    height: 2px;
+    background-color: var(--link-color);
+    width: 0;
+  }
