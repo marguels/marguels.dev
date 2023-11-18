@@ -1,0 +1,26 @@
+.aboutContainer {
+   min-height: 70vh; 
+}
+
+.picture {
+    max-width: 300px;
+    border-radius: 50%;
+    margin: 2rem 0;
+}
+
+.aboutContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.aboutText {
+    margin: 2rem 4rem;
+    text-align: justify;
+}
+
+.imageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

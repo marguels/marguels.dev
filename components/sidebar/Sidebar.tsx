@@ -33,7 +33,7 @@ const Sidebar = ({ toc }: SidebarProps) => {
         });
       },
       {
-        rootMargin: '-70px 0px 0px 0px', // Adjust this value to the height of your header
+        rootMargin: '-100px 0px 0px 0px', // Adjust this value to the height of your header
         threshold: 0.8
       } // Adjust this value if needed
     );
@@ -53,21 +53,24 @@ const Sidebar = ({ toc }: SidebarProps) => {
 
   return (
     <div className={styles.sidebarContainer}>
-    {toc.map((heading, index) => {
-      // const headingClass = `sideButtonH${heading.depth + 1}`;
-      const headingClass = `side-button-h${heading.depth + 1}`;
+      <h3 className={styles.tocTitle}>Table of content</h3>
+      <div className="outline-max"/>
+      <div className={styles.tocItems}>
+        {toc.map((heading, index) => {
+          const headingClass = `side-button-h${heading.depth + 1}`;
 
-      return (
-        <a
-          href={`#${heading.id}`}
-          key={index}
-          onClick={(event) => handleClick(heading.id, event)}
-          className={`${styles.sidebarButton} ${heading.id === activeId ? styles.activeSideButton : ''} ${styles[headingClass]}`}
-        >
-          {heading.text}
-        </a>
-      );
-    })}
+          return (
+            <a
+              href={`#${heading.id}`}
+              key={index}
+              onClick={(event) => handleClick(heading.id, event)}
+              className={`${styles.sidebarButton} ${heading.id === activeId ? styles.activeSideButton : ''} ${styles[headingClass]}`}
+            >
+              {heading.text}
+            </a>
+          );
+        })}
+      </div>
   </div>
   );
 };

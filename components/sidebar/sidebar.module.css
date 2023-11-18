@@ -1,8 +1,9 @@
 .sidebarContainer {
   position: sticky;
-  top: 10vh;
+  top: 25vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-height: 100vh;
 }
 
@@ -11,11 +12,13 @@
   padding: 0.1rem;
   color: var(--text-color);
   text-decoration: none;
+  /* background-color: var(--alt-background); */
 }
 
-.activeSideButton {
+.sidebarButton.activeSideButton {
   color: var(--link-color);
-  background-color: var(--alt-background);
+  font-weight: bold;
+  background-color: var(--foreground);
 }
 
 .side-button-h1 {
@@ -28,4 +31,15 @@
 
 .side-button-h3 {
   margin-left: 40px;
+}
+
+.tocTitle {
+  align-self: center;
+}
+
+.tocItems {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: left;
 }

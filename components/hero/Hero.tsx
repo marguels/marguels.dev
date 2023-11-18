@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
-import styles from "./hero.module.css"
+import styles from "./hero.module.css";
+import Link from "next/link";
 
 interface Props {
   title: string;
@@ -9,13 +11,30 @@ interface Props {
 
 const Hero = () => {
   return (
-    <section className={styles.hero}>
-      <div className="hero-content">
-        <h1>Hi, I'm Margherita!</h1>
-        <p>Welcome to my personal space where I share my knowledge,<br/> my projects, and where I try to connect the dots.</p>
+    <section className={styles.heroContainer}>
+      <div className={styles.heroContent}>
+        <h1>
+          Hi, I'm <b className="accent">Margherita</b>!
+        </h1>
+        <p>
+          Welcome to my corner of the internet,
+          <br /> my space for sharing and trying to{" "}
+          <Link href="/blog">
+            <b className="accent">connect the dots</b>
+          </Link>
+          .<br />
+        </p>
+        <button
+          className={styles.heroButton}
+          onClick={() =>
+            (window.location.href = "mailto:marguels.dev@gmail.com")
+          }
+        >
+          Contact me
+        </button>
       </div>
-    <div className="hero-image">
-        <img src="/images/hero.svg" alt="hero" />
+      <div className={styles.heroImage}>
+        <img src="/images/avatar.png" alt="hero" className={styles.heroImage} />
       </div>
     </section>
   );

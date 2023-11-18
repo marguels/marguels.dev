@@ -1,6 +1,36 @@
-.hero {
+.heroContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-height: 90vh;
+    /* justify-content: center; */
+}
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.heroButton{
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--foreground);
+    font-weight: 600;
+    font-size: medium;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    justify-self: flex-end;
+    width: fit-content;
+}
+
+.heroImage{
+    max-width: 300px;
+    display: flex;
+    
 }

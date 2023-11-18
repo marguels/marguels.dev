@@ -1,9 +1,18 @@
 .headerContainer {
-    background-color: var(--alt-background);
+    background-color: var(--foreground);
     position: sticky;
     top:0;
     width: 100%;
     z-index: 1;
+    height: 60px;
+    padding-top: 20px;
+  }
+
+  .headerContainer::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: var(--delim-color);
   }
   
   .navbar {
@@ -30,7 +39,22 @@
   }
 
   .scrollbar {
-    height: 2px;
+    height: 3px;
     background-color: var(--link-color);
     width: 0;
+    position: absolute;
+    top: calc(100% -3px);
   }
+
+@media (min-width: 768px) {
+  .headerContainer {
+    height: 50px;
+  }
+}
+
+/* Increase height for even larger screens */
+@media (min-width: 1024px) {
+  .headerContainer {
+    height: 60px;
+  }
+}

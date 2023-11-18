@@ -4,6 +4,7 @@ import 'highlight.js/styles/github-dark-dimmed.css';
 
 import Header from '@/components/header/Header';
 import Head from "next/head";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: { title: string; description: string } = {
   title: "Marguino",
@@ -35,7 +36,7 @@ export default function RootLayout({
         <div className="main-content">
         {children}
         </div>
-        {footer}
+        <Footer/>
       </body>
     </html>
   );

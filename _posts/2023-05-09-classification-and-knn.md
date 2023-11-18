@@ -2,6 +2,8 @@
 layout: post
 title: >
     Classification problems: a look in depth at the k-NN Classifier
+excerpt: >
+    Understanding the Scikit-learn kNN classifier beyond simple usage.
 date: 2023-04-25 10:14:00-0400
 description: 
 categories: data-science machine-learning
@@ -26,7 +28,7 @@ We have two main types of Machine Learning Classification problems:
 
 The choice of effective features is crucial in Classification problems, so that we can define a clear classification rule.
 
-# Nearest Neighbours rules
+## Nearest Neighbours rules
 A set of N features creates a **feature space** of N dimensions, which can be mapped to a real-valued cartesian plane.
 
 In such feature space, observations that are similar will *cluster* together. The groups formed by the **Nearest Neighbours**, ideally, have enough contrast to be distinguished in different categories.

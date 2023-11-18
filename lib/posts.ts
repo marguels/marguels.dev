@@ -85,7 +85,7 @@ export const getPostContent = async (slug: string): Promise<PostContent> => {
 
   return {
     slug,
-    ...(data as { date: string; title: string }),
+    ...(data as { date: string; title: string; excerpt: string; }),
     contentHtml,
     toc,
   };

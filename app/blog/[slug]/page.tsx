@@ -10,11 +10,14 @@ const PostPage = async (props: any) => {
     <div className="post-container">
       <Sidebar toc={postData.toc} />
       <div className="post-content">
-        <Link href="/blog">
+        <div className="post-header">
+          <Link href="/blog" className="back-link">Back to blog</Link>
           <h1>{postData.title}</h1>
-        </Link>
-        <article>
+          <h3>{postData.excerpt}</h3>
           <Date>{postData.date}</Date>
+        </div>
+        <div className="outline-max"/>
+        <article>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
       </div>

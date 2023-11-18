@@ -6,17 +6,19 @@ const Header = () => {
     return ( 
     <header className={styles.headerContainer}>
         <div className={styles.navbar}>
-          <Link href="/"><h1>Marguino</h1></Link>
+          <Link href="/" className="text">
+            <h1><b>Marg</b><b className="accent">uels</b></h1>
+            </Link>
           <nav>
             <ul>
               <li>
-                <Link href="/#about">About</Link>
+                <Link href="/#about" className="link">About</Link>
               </li>
               <li>
-                <Link href="/#experience">Experience</Link>
+                <Link href="/#experience" className="link">Experience</Link>
               </li>
               <li>
-                <Link href="/blog">Blog</Link>
+                <Link href="/blog" className="link">Blog</Link>
               </li>
             </ul>
           </nav>

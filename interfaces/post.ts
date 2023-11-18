@@ -2,6 +2,7 @@ export interface PostContent {
     slug: string;
     date: string;
     title: string;
+    excerpt: string;
     contentHtml: string;
     toc: TocItem[];
   }
