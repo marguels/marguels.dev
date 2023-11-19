@@ -1,11 +1,17 @@
 .aboutContainer {
-   min-height: 70vh; 
+   min-height: 70vh;
+   max-width: 80%;
 }
 
 .picture {
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 50%;
     margin: 2rem 0;
+}
+
+.sectionTitle {
+    font-weight: 500;
+    margin: 1rem;
 }
 
 .aboutContent{
@@ -15,7 +21,7 @@
 }
 
 .aboutText {
-    margin: 2rem 4rem;
+    margin: 0 4rem 4rem 4rem;
     text-align: justify;
 }
 

@@ -13,7 +13,10 @@
   --link-color: #6c63ff;
   --accent-color: #6c63ff;
   /* --background-end-rgb: 255, 255, 255; */
+ --prose-body: #374151;
+ --prose-heading: #111827;
 
+  
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #6c63ff 0deg,
@@ -178,4 +181,8 @@ a {
 .back-link {
   display: flex;
   padding-bottom: 1rem;
+}
+
+.post-image {
+  width: 100%;
 }

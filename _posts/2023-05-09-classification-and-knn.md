@@ -307,4 +307,4 @@ $$
 A = \frac{a}{b}
 $$
 
-{% include figure.html path="assets/img/knn_classifier_plotly_contour_data.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+![Image](/assets/knn_classifier_plotly_contour_no_data.png)

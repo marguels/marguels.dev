@@ -1,6 +1,8 @@
 import "../public/styles/globals.css";
 // import 'highlight.js/styles/an-old-hope.css';
 import 'highlight.js/styles/github-dark-dimmed.css';
+import "katex/dist/katex.min.css";
+
 
 import Header from '@/components/header/Header';
 import Head from "next/head";

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import remarkParse from "remark-parse";
-import { unified } from "unified";
+import { Plugin, Transformer, unified } from "unified";
 import rehypeKatex from "rehype-katex";
 import rehypeStringify from "rehype-stringify";
 import remarkMath from "remark-math";
@@ -13,6 +13,11 @@ import rehypeHighlight from "rehype-highlight";
 import { Element, Root } from "hast";
 import { toString } from "hast-util-to-string";
 import { PostContent, TocItem } from "@/interfaces/post";
+import remarkEmbedImages from "remark-embed-images";
+import { visit } from "unist-util-visit";
+import rehypeRaw from "rehype-raw";
+import { Node } from 'unist';
+import { selectAll } from "hast-util-select";
 
 const postsDirectory = path.join(process.cwd(), "_posts");
 
@@ -91,6 +96,19 @@ export const getPostContent = async (slug: string): Promise<PostContent> => {
   };
 };
 
+export const loadPageContent = async (fullPath: string) => {
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+
+  const { data, content } = matter(fileContents);
+  const { contentHtml, toc } = await processContent(content);
+
+  return {
+    ...(data as { date: string; title: string; excerpt: string; }),
+    contentHtml,
+    toc,
+  };
+}
+
 const addToc = (tree: Root): TocItem[] => {
   return tree.children
     .filter(
@@ -107,7 +125,42 @@ const addToc = (tree: Root): TocItem[] => {
     }));
 };
 
-const processContent = async (
+// const addClassToImages: Plugin = (): Transformer => {
+//   return (tree: Node): Node => {
+//     const imgElements: Element[] = selectAll('img', tree as Root);
+//     imgElements.forEach((element: Element) => {
+//       element.properties.className = ['your-class-name'];
+//     });
+//     return tree;
+//   };
+// };
+
+// const addClassToImages: Plugin = (): Transformer => {
+//   return (tree: Node): Node => {
+//     const imgElements: Element[] = selectAll('img', tree as Root);
+//     imgElements.forEach((element: Element) => {
+//       element.properties.className = ['your-class-name'];
+//     });
+//     return tree;
+//   };
+// };
+
+const addClassToImages: Plugin = (): Transformer => {
+  return (tree: Node): Node => {
+    visit(tree, 'element', (node: Node) => {
+      if (isElement(node) && node.tagName === 'img') {
+        node.properties.className = ['post-image'];
+      }
+    });
+    return tree;
+  };
+};
+
+function isElement(node: Node): node is Element {
+  return 'tagName' in node && 'properties' in node;
+}
+
+export const processContent = async (
   content: string
 ): Promise<{ contentHtml: string; toc: TocItem[] }> => {
   const processor = unified()
@@ -115,14 +168,19 @@ const processContent = async (
     .use(remarkMath)
     .use(remarkRehype)
     .use(rehypeHighlight)
+    .use(remarkEmbedImages)
+    .use(rehypeRaw)
+    .use(addClassToImages)
     .use(rehypeKatex)
     .use(rehypeSlug)
     .use(headings, { behavior: "wrap" })
     .use(rehypeStringify);
 
   const parsed = processor.parse(content);
-  const hastTree = await processor.run(parsed);
+  const hastTree = await processor.run(parsed) as Root;
   const toc: TocItem[] = addToc(hastTree);
 
   return { contentHtml: processor.stringify(hastTree), toc };
 };
+
+

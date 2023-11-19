@@ -34,7 +34,7 @@ const Hero = () => {
         </button>
       </div>
       <div className={styles.heroImage}>
-        <img src="/images/avatar.png" alt="hero" className={styles.heroImage} />
+        <img src="/assets/avatar.png" alt="hero" className={styles.heroImage} />
       </div>
     </section>
   );
