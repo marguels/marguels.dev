@@ -1,4 +1,3 @@
-// icon:menu | Entypo http://entypo.com/ | Daniel Bruce
 import * as React from "react";
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {

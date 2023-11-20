@@ -1,9 +1,14 @@
 'use client'
-import { useState } from "react";
 import MenuIcon from "../icons/MenuIcon";
 import styles from "./burger.module.css";
 
-const Burger = ({isOpen, toggleMenu}) => {
+interface BurgerProps {
+    isOpen: boolean;
+    toggleMenu: () => void;
+  }
+
+
+const Burger = ({isOpen, toggleMenu}: BurgerProps) => {
     return <div className={isOpen ? styles.open : styles.hide} onClick={toggleMenu}>
                 <MenuIcon/>
             </div>

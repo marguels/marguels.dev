@@ -3,7 +3,6 @@ import { useState } from "react";
 import styles from "./header.module.css";
 import ScrollProgress from "./ScrollProgress";
 import Link from "next/link";
-import MenuIcon from "../icons/MenuIcon";
 import Burger from "../burger/Burger";
 import Menu from "../burger/Menu";
 
