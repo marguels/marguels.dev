@@ -1,6 +1,7 @@
 import { getPostContent, getPostMetadata } from "../../../lib/posts";
 import Link from "next/link";
 import Sidebar from "@/components/sidebar/Sidebar";
+import { PostContent } from "@/components/postContent/PostContent";
 
 const PostPage = async (props: any) => {
   const slug = props.params.slug;
@@ -17,7 +18,7 @@ const PostPage = async (props: any) => {
         </div>
         <div className="outline-max"/>
         <article>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <PostContent contentHtml={postData.contentHtml} />
         </article>
       </div>
     </div>

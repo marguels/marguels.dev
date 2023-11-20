@@ -15,16 +15,7 @@ const About = () => {
       <h1 className={`accent ${styles.sectionTitle}`}>About</h1>
       <div className="outline-max"></div>
       <div className={styles.aboutContent}>
-        <div className={styles.imageBox}>
-          <img
-            src="/assets/pro_pic.jpeg"
-            alt="picture"
-            className={styles.picture}
-          />
-          <p>🌍 <b>Amsterdam</b>, The Netherlands</p>
-        </div>
-        <div className={styles.aboutText}>
-          <h2>Welcome to my little digital garden 🌱</h2>
+      <h2>Welcome to my little digital garden 🌱</h2>
           My name is Margherita, and I'm the curator of this little space of the
           internet.
           <br />
@@ -52,6 +43,16 @@ const About = () => {
           happy!
           <br />
           <br />
+        <div className={styles.imageBox}>
+          <img
+            src="/assets/pro_pic.jpeg"
+            alt="picture"
+            className={styles.picture}
+          />
+          <p>🌍 <b>Amsterdam</b>, The Netherlands</p>
+        </div>
+        <div className={styles.aboutText}>
+          
           <h3>About me</h3>
           👩🏻‍💻 Currently, I work as a Backend Software Engineer at{" "}
           <Link href={"https://www.elsevier.com"}>Elsevier</Link>), empowering

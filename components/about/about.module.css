@@ -4,9 +4,8 @@
 }
 
 .picture {
-    max-width: 400px;
+    max-width: 350px;
     border-radius: 50%;
-    margin: 2rem 0;
 }
 
 .sectionTitle {
@@ -15,18 +14,22 @@
 }
 
 .aboutContent{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; */
 }
 
 .aboutText {
-    margin: 0 4rem 4rem 4rem;
+    margin: 0 4rem 4rem 0rem;
     text-align: justify;
+    /* overflow: auto; */
 }
 
 .imageBox {
+    float: left;
+    margin: 2rem 2rem 1rem 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* align-items: center; */
 }
