@@ -49,3 +49,49 @@
     display: flex;
     
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .heroContainer {
+     display: flex;
+     flex-direction: column-reverse;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+    }
+  
+    .heroContent {
+     margin-top: 2rem;
+     align-self: center;
+     text-align: center;
+     align-items: center;
+    }
+  
+    .heroImage {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    .heroContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+       }
+     
+       .heroContent {
+        margin-top: 2rem;
+        align-self: center;
+        text-align: center;
+        align-items: center;
+       }
+     
+       .heroImage {
+         max-width: 100%;
+         height: auto;
+       }
+  }

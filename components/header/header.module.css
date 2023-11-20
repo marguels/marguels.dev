@@ -46,15 +46,46 @@
     top: calc(100% -3px);
   }
 
-@media (min-width: 768px) {
-  .headerContainer {
-    height: 50px;
+  .burger {
+    display: none;
   }
-}
 
-/* Increase height for even larger screens */
-@media (min-width: 1024px) {
-  .headerContainer {
-    height: 60px;
+  @media (max-width: 576px) {
+    .headerContainer {
+      min-width: 100%;
+    }
+  
+    .navbar {
+      width: 100%;
+    }
+
+    .navbar ul {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+    }
   }
-}
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    .headerContainer {
+      /* Adjust styles as needed */
+    }
+  
+    .navbar {
+      max-width: 80%;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (max-width: 992px) {
+    .headerContainer {
+      /* Adjust styles as needed */
+    }
+  
+    .navbar {
+      max-width: 80%;
+    }
+  }

@@ -1,3 +1,4 @@
+'use client';
 import styles from "./header.module.css"
 import ScrollProgress from "./ScrollProgress"
 import Link from "next/link";

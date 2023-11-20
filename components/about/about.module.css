@@ -33,3 +33,36 @@
     align-items: center;
     /* align-items: center; */
 }
+
+.intro {}
+
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (max-width: 992px) {
+    .aboutContent {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .aboutContent {
+        width: 100%;
+      }
+  
+      .imageBox {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+  
+      .picture {
+          max-width: 350px;
+      }
+  
+      .aboutText {
+          width: 100%;
+      }
+  }

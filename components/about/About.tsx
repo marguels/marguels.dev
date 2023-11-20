@@ -15,7 +15,8 @@ const About = () => {
       <h1 className={`accent ${styles.sectionTitle}`}>About</h1>
       <div className="outline-max"></div>
       <div className={styles.aboutContent}>
-      <h2>Welcome to my little digital garden 🌱</h2>
+        <div className={styles.intro}>
+        <h2>Welcome to my little digital garden 🌱</h2>
           My name is Margherita, and I'm the curator of this little space of the
           internet.
           <br />
@@ -43,6 +44,7 @@ const About = () => {
           happy!
           <br />
           <br />
+        </div>
         <div className={styles.imageBox}>
           <img
             src="/assets/pro_pic.jpeg"
