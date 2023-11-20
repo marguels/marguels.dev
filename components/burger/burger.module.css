@@ -1,0 +1,43 @@
+.menu {
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background-color: var(--foreground);
+    border-radius: 5%;
+    width: 150px;
+    right: 0;
+    top:80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add this line */
+  }
+  
+  .open {
+    max-height: 100vh; /* Or any other value that suits your needs */
+  }
+
+.closed {
+  display: none;
+}
+
+.menuItem {
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menuItem:hover {
+  color: #666;
+}
+
+.menuItem a,
+.menuItem a:hover,
+.menuItem a:active,
+.menuItem a:visited {
+  text-decoration: none !important;
+  color: inherit;
+}

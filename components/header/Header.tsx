@@ -1,31 +1,62 @@
-'use client';
-import styles from "./header.module.css"
-import ScrollProgress from "./ScrollProgress"
+"use client";
+import { useState } from "react";
+import styles from "./header.module.css";
+import ScrollProgress from "./ScrollProgress";
 import Link from "next/link";
+import MenuIcon from "../icons/MenuIcon";
+import Burger from "../burger/Burger";
+import Menu from "../burger/Menu";
 
 const Header = () => {
-    return ( 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  }
+  return (
     <header className={styles.headerContainer}>
-        <div className={styles.navbar}>
+      <div className={styles.navbar}>
+        <div className={styles.title}>
           <Link href="/" className="text">
-            <h1><b>Marg</b><b className="accent">uels</b></h1>
-            </Link>
-          <nav>
-            <ul>
-              <li>
-                <Link href="/#about" className="link">About</Link>
-              </li>
-              <li>
-                <Link href="/#experience" className="link">Experience</Link>
-              </li>
-              <li>
-                <Link href="/blog" className="link">Blog</Link>
-              </li>
-            </ul>
-          </nav>
+            <h1>
+              <b>Marg</b>
+              <b className="accent">uels</b>
+            </h1>
+          </Link>
         </div>
-        <ScrollProgress/>
-      </header>)
-}
+        <nav>
+          <div className={styles.burger}>
+            <Burger isOpen={isOpen} toggleMenu={toggleMenu} />
+          </div>
+          <ul>
+            <li>
+              <Link href="/#about" className="link">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/#experience" className="link">
+                Experience
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="link">
+                Blog
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <ScrollProgress />
+      <div className={styles.burger}>
+        <Menu isOpen={isOpen} closeMenu={closeMenu}/>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
