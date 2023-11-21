@@ -15,7 +15,7 @@ const Header = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
-  }
+  };
   return (
     <header className={styles.headerContainer}>
       <div className={styles.navbar}>
@@ -52,7 +52,7 @@ const Header = () => {
       </div>
       <ScrollProgress />
       <div className={styles.burger}>
-        <Menu isOpen={isOpen} closeMenu={closeMenu}/>
+        <Menu isOpen={isOpen} closeMenu={closeMenu} />
       </div>
     </header>
   );

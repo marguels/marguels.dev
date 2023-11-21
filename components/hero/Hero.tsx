@@ -11,7 +11,6 @@ interface Props {
 }
 
 const Hero = () => {
-
   return (
     <section className={styles.heroContainer}>
       <div className={styles.backgroundAnimation}>
@@ -23,15 +22,14 @@ const Hero = () => {
         </h1>
         <p className={styles.subtitle}>
           Welcome to my corner of the internet.
-          <br />This is a space for sharing and trying to{" "}
-            <b className="accent">connect the dots</b>
+          <br />
+          This is a space for sharing and trying to{" "}
+          <b className="accent">connect the dots</b>
           .<br />
         </p>
         <div>
-        <Link href="/blog">
-            <button className={styles.heroButton}>
-            Digital garden 🪴
-            </button>
+          <Link href="/blog">
+            <button className={styles.heroButton}>Digital garden 🪴</button>
           </Link>
           <button
             className={styles.altButton}
@@ -41,7 +39,6 @@ const Hero = () => {
           >
             Contact me 📬
           </button>
-          
         </div>
       </div>
     </section>

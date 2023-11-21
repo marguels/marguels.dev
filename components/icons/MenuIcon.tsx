@@ -1,3 +1,4 @@
+'use client';
 import * as React from "react";
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {

@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { TocItem } from "@/interfaces/post";
-import styles from './sidebar.module.css';
+import styles from "./sidebar.module.css";
 
 interface SidebarProps {
   toc: TocItem[];
@@ -21,21 +21,21 @@ const handleClick = (id: string, event: React.MouseEvent) => {
 };
 
 const Sidebar = ({ toc }: SidebarProps) => {
-  const [activeId, setActiveId] = useState('');
+  const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveId(entry.target.id);
           }
         });
       },
       {
-        rootMargin: '-100px 0px 0px 0px', // Adjust this value to the height of your header
-        threshold: 0.8
-      } // Adjust this value if needed
+        rootMargin: "-100px 0px 0px 0px",
+        threshold: 0.8,
+      }
     );
 
     toc.forEach(({ id }) => {
@@ -54,7 +54,7 @@ const Sidebar = ({ toc }: SidebarProps) => {
   return (
     <div className={styles.sidebarContainer}>
       <h3 className={styles.tocTitle}>Table of content</h3>
-      <div className="outline-max"/>
+      <div className="outline-max" />
       <div className={styles.tocItems}>
         {toc.map((heading, index) => {
           const headingClass = `side-button-h${heading.depth + 1}`;
@@ -64,14 +64,16 @@ const Sidebar = ({ toc }: SidebarProps) => {
               href={`#${heading.id}`}
               key={index}
               onClick={(event) => handleClick(heading.id, event)}
-              className={`${styles.sidebarButton} ${heading.id === activeId ? styles.activeSideButton : ''} ${styles[headingClass]}`}
+              className={`${styles.sidebarButton} ${
+                heading.id === activeId ? styles.activeSideButton : ""
+              } ${styles[headingClass]}`}
             >
               {heading.text}
             </a>
           );
         })}
       </div>
-  </div>
+    </div>
   );
 };
 

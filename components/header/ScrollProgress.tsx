@@ -1,15 +1,17 @@
 "use client";
-import styles from "./header.module.css"
+import styles from "./header.module.css";
 import { useEffect } from "react";
 
 export default function ScrollProgress() {
   useEffect(() => {
-    console.log("Adding event listener"); // Add this line
+    console.log("Adding event listener");
     const handleScroll = () => {
       var winScroll = document.documentElement.scrollTop;
-        console.log(`winScroll: ${winScroll}`); // Add this line
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        console.log(`Scrollable height: ${height}`); // Add this line
+      console.log(`winScroll: ${winScroll}`);
+      var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      console.log(`Scrollable height: ${height}`);
       var scrolled = (winScroll / height) * 100;
       console.log(`Scrolled: ${scrolled}%`);
       const scrollbar = document.getElementById("scrollbar");
@@ -22,15 +24,10 @@ export default function ScrollProgress() {
 
     // Clean up function
     return () => {
-      console.log("Removing event listener"); // Add this line
+      console.log("Removing event listener");
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  return (
-    <div
-      id="scrollbar"
-      className={styles.scrollbar}
-    ></div>
-  );
+  return <div id="scrollbar" className={styles.scrollbar}></div>;
 }
