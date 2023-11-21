@@ -1,97 +1,121 @@
 .heroContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    min-height: 90vh;
-    /* justify-content: center; */
+  display: flex;
+  place-items: center; /* centers items both horizontally and vertically */
+  height: 90vh; /* adjust as needed */
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  /* justify-content: center; */
 }
 
-.heroContent{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+.backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
 }
 
-.heroButton{
-    margin-left: 20px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: var(--accent-color);
-    color: var(--foreground);
-    font-weight: 600;
-    font-size: medium;
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
-    justify-self: flex-end;
-    width: fit-content;
+.heroContent {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+  z-index: 1;
+  align-items: center;
 }
 
-.altButton{
-    margin-left: 20px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: var(--foreground);
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: medium;
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
-    justify-self: flex-end;
-    width: fit-content;
+.heroButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: medium;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  justify-self: flex-end;
+  width: fit-content;
 }
 
-.heroImage{
-    max-width: 500px;
-    display: flex;
-    
+.subtitle{
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.altButton {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--foreground);
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: medium;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  justify-self: flex-end;
+  width: fit-content;
+}
+
+.altButtonLink {
+  text-decoration: none;
+}
+
+.heroImage {
+  max-width: 500px;
+  display: flex;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-    .heroContainer {
-     display: flex;
-     flex-direction: column-reverse;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-    }
-  
-    .heroContent {
-     margin-top: 2rem;
-     align-self: center;
-     text-align: center;
-     align-items: center;
-    }
-  
-    .heroImage {
-      max-width: 100%;
-      height: auto;
-    }
+  .heroContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
-  
-  /* Medium devices (tablets, 768px and up) */
-  @media (max-width: 768px) {
-    .heroContainer {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-       }
-     
-       .heroContent {
-        margin-top: 2rem;
-        align-self: center;
-        text-align: center;
-        align-items: center;
-       }
-     
-       .heroImage {
-         max-width: 100%;
-         height: auto;
-       }
+
+  .heroContent {
+    margin-top: 2rem;
+    align-self: center;
+    text-align: center;
+    align-items: center;
   }
+
+  .heroImage {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .heroContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .heroContent {
+    margin-top: 2rem;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .heroImage {
+    max-width: 100%;
+    height: auto;
+  }
+}

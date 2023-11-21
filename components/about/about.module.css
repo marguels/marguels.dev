@@ -1,6 +1,9 @@
 .aboutContainer {
    min-height: 70vh;
    max-width: 80%;
+   z-index: 1;
+   background-color: var(--background);
+   padding: 2rem;
 }
 
 .picture {
@@ -17,12 +20,6 @@
     /* display: flex;
     flex-direction: row;
     align-items: center; */
-}
-
-.aboutText {
-    margin: 0 4rem 4rem 0rem;
-    text-align: justify;
-    /* overflow: auto; */
 }
 
 .imageBox {
