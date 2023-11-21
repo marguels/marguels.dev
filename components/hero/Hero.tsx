@@ -27,12 +27,12 @@ const Hero = () => {
           <b className="accent">connect the dots</b>
           .<br />
         </p>
-        <div>
+        <div className={styles.buttonsContainer}>
           <Link href="/blog">
-            <button className={styles.heroButton}>Digital garden 🪴</button>
+            <button className={`${styles.button} ${styles.heroButton}`}>Digital garden 🪴</button>
           </Link>
           <button
-            className={styles.altButton}
+            className={`${styles.button} ${styles.altButton}`}
             onClick={() =>
               (window.location.href = "mailto:marguels.dev@gmail.com")
             }

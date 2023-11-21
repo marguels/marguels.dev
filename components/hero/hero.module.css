@@ -29,19 +29,6 @@
   align-items: center;
 }
 
-.heroButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: var(--accent-color);
-  color: var(--foreground);
-  font-weight: 600;
-  font-size: medium;
-  text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
-  justify-self: flex-end;
-  width: fit-content;
-}
 
 .subtitle{
   font-size: 1.05rem;
@@ -50,19 +37,36 @@
   text-align: center;
 }
 
-.altButton {
-  margin-left: 20px;
+
+.buttonsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin-top: 20px;
+}
+
+.button {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: var(--foreground);
-  color: var(--accent-color);
   font-weight: 600;
   font-size: medium;
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
   justify-self: flex-end;
   width: fit-content;
+  flex: none;
+  white-space: nowrap;
+}
+
+.heroButton {
+  background-color: var(--accent-color);
+  color: var(--foreground);
+  margin-right: 1rem;
+}
+
+.altButton {
+  background-color: var(--foreground);
+  color: var(--accent-color);
 }
 
 .altButtonLink {
@@ -90,8 +94,20 @@
     align-items: center;
   }
 
+  .heroButton {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
   .heroImage {
     max-width: 100%;
     height: auto;
+  }
+
+  .buttonsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
