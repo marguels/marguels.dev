@@ -2,6 +2,7 @@ import { getPostContent, getPostMetadata } from "../../../lib/posts";
 import Link from "next/link";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { PostContent } from "@/components/postContent/PostContent";
+import NetworkGraph from "@/components/networkGraph/NetworkGraph";
 
 const PostPage = async (props: any) => {
   const slug = props.params.slug;
@@ -21,6 +22,7 @@ const PostPage = async (props: any) => {
           <PostContent contentHtml={postData.contentHtml} />
         </article>
       </div>
+      <NetworkGraph data={postData.obsidianLinks}/>
     </div>
   );
 };

@@ -54,7 +54,7 @@ const About = () => {
         <div className={styles.aboutText}>
           <h3>About me</h3>
           👩🏻‍💻 Currently, I work as a Backend Software Engineer at{" "}
-          <Link href={"https://www.elsevier.com"}>Elsevier</Link>), empowering
+          <Link href={"https://www.elsevier.com"}>Elsevier</Link>, empowering
           researchers navigating the intricate world of publications through
           Scopus. I have been working in this stimulating team for over 3 years
           as a Back end developer, embarking in the journey of migrating a 15
