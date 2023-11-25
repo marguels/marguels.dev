@@ -5,9 +5,7 @@ import { visit } from "unist-util-visit";
 import { Node, Literal, Parent } from 'unist';
 import { LinkObject, NodeObject, ObsidianLinks, TocItem } from "@/interfaces/post";
 import { Link } from "mdast";
-import { selectAll } from 'hast-util-select';
 import slugify from "slugify";
-import { useEffect } from "react";
 
 const BRACKET_LINK_REGEX = /\[\[([a-zA-ZÀ-ÿ0-9-'?%.():&,+/€! ]+)#?([a-zA-ZÀ-ÿ0-9-'?%.():&,+/€! ]+)?\|?([a-zA-ZÀ-ÿ0-9-'?%.():&,+/€! ]+)?\]\]/g;
 

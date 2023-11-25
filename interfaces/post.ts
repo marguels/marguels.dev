@@ -11,8 +11,9 @@ export interface PostContent {
 export interface PostMetadata {
     title: string;
     date: string;
-    subtitle: string;
+    excerpt: string;
     slug: string;
+    tags: string[];
 }
 
 export interface TocItem {

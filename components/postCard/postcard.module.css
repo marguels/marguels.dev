@@ -1,0 +1,32 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 3px 3px 2px rgb(13, 53, 45);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--text-color);
+}
+
+.cardContainer:hover {
+    box-shadow: 1px 1px 2px rgb(13, 53, 45);
+}
+
+.cardDescription {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.cardTitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+}

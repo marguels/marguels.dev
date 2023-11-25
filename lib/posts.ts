@@ -1,9 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { PostContent } from "@/interfaces/post";
+import { PostContent, PostMetadata } from "@/interfaces/post";
 import { processContent } from "./processors/contentProcessing";
-import exp from "constants";
 
 const postsDirectory = path.join(process.cwd(), "_posts");
 
@@ -31,7 +30,7 @@ export function getSortedPostsData() {
   });
 }
 
-export const getAllPostIds = () => {
+export const getAllPostsSlug = () => {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
@@ -42,7 +41,7 @@ export const getAllPostIds = () => {
   });
 };
 
-export const getPostMetadata = () => {
+export const getAllPostsMetadata = () : PostMetadata[] => {
   const files = fs.readdirSync(postsDirectory);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
   const posts = markdownPosts.map((fileName) => {
@@ -51,18 +50,23 @@ export const getPostMetadata = () => {
       "utf8"
     );
     const matterResult = matter(fileContents);
+    const tags = matterResult.data.tags ? matterResult.data.tags.split(",") : [];
+    console.log(tags)
     return {
       title: matterResult.data.title,
       date: matterResult.data.date,
-      subtitle: matterResult.data.subtitle,
+      excerpt: matterResult.data.excerpt,
       slug: fileName.replace(".md", ""),
+      tags: tags || [],
     };
   });
   return posts;
 };
 
-export const getPostTitleFromSlug = (slug: string) => {
-
+export const getPostsByTag = (tag: string): PostMetadata[] => {
+  const allPosts = getAllPostsMetadata();
+  const postsByTag = allPosts.filter((post) => post.tags.includes(tag));
+  return postsByTag;
 };
 
 export const getPostContent = async (slug: string): Promise<PostContent> => {

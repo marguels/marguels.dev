@@ -1,4 +1,4 @@
-import { getPostContent, getPostMetadata } from "../../../lib/posts";
+import { getPostContent, getAllPostsMetadata } from "@/lib/posts";
 import Link from "next/link";
 import Sidebar from "@/components/sidebar/Sidebar";
 import { PostContent } from "@/components/postContent/PostContent";
@@ -28,7 +28,7 @@ const PostPage = async (props: any) => {
 };
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = getAllPostsMetadata();
   return posts.map((post) => ({
     slug: post.slug,
   }));
