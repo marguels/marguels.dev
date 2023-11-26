@@ -1,11 +1,14 @@
 .sidebarContainer {
   position: sticky;
   top: 25vh;
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-height: 100vh;
   width: 250px;
+  grid-area: sidebar;
 }
 
 .sidebarButton {

@@ -14,9 +14,6 @@ sidebar: true
 > “How things may be in themselves, without regard to the representations through which they affect us, is utterly beyond the sphere of our cognition.”  
 > ― _Immanuel Kant, Critique of Pure Reason_
 
-
-[[hello-world#abc-def|Hello world!]] this is an embedded link! Now I can build Obsidian graphs!
-
 We often deal with data that can be grouped into different *sub-populations*, groups that share a set of *similar* *features*, a *pattern* which can be recognised. We call *observation* a set of measures of the features that allow us to distinguish said sub-groups.
 
 **Classification** is the problem of identifying to which sub-population belongs an observation. Humans do it on a daily basis and entire disciplines have built their understanding upon classifications. For example, a classification happens when a botanist identifies the species of a flower, or when we have to tell spaghetti from fusilli. We evaluate their category based on some common features that characterise it, and how *similar* they are, by measuring their features. Immanuel Kant even held that we _can_ discover the essential categories that govern human understanding, which are the basis for any possible cognition of phenomena [(I. Kant)](https://plato.stanford.edu/entries/categories/#KanCon).

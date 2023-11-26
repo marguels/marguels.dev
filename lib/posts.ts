@@ -63,6 +63,31 @@ export const getAllPostsMetadata = () : PostMetadata[] => {
   return posts;
 };
 
+export const getPostMetadataBySlug = (slug: string) : PostMetadata | null | undefined => {
+  try {
+    const fileContents = fs.readFileSync(
+      path.resolve(postsDirectory, `${slug}.md`),
+      'utf8'
+    );
+   
+    const matterResult = matter(fileContents);
+      const tags = matterResult.data.tags ? matterResult.data.tags.split(",") : [];
+      return {
+        title: matterResult.data.title,
+        date: matterResult.data.date,
+        excerpt: matterResult.data.excerpt,
+        sidebar: matterResult.data.sidebar,
+        slug: slug,
+        tags: tags || [],
+      };
+  } catch (error) {
+    if(error instanceof Error) {
+      console.error(`Failed to read file ${slug}.md: ${error.message}`);
+      return null;
+    }
+  }
+};
+
 export const getPostsByTag = (tag: string): PostMetadata[] => {
   const allPosts = getAllPostsMetadata();
   const postsByTag = allPosts.filter((post) => post.tags.includes(tag));

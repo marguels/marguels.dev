@@ -114,8 +114,13 @@ a {
 }
 
 .post-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-areas: "sidebar main graph";
+}
+
+.post-container > article {
+  align-self: center;
 }
 
 .ccc {
@@ -127,6 +132,7 @@ a {
 .post-content {
   max-width: 600px;
   margin: auto;
+  grid-area: main;
   top: 10vh;
   padding-left: 20px;
   align-items: center;

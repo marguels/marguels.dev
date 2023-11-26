@@ -7,7 +7,7 @@ sidebar: false
 ---
 # The art of taking notes
 
-Since I started studying, I've been refining the art of note-taking. It's something that pleases me, helps me remember effectively thanks to my visual-memory prevalence, and ends up aiding my long-term memory.
+Since I started studying, I've been refining the art of note-taking. It's something that pleases me, helps me remember effectively thanks to my visual-oriented memory, and ends up aiding my long-term memory.
 Sometimes I find myself impressed with my ability to remember _that thing_. As I've learned, usually there was some effective memorisation technique behind it.
 
 I've been trying different note-taking systems, mostly developed for pen and paper, and by the time of my M.Sc. studies, I was writing visually pleasing, colour-coded, book-like notes. I loved that, and it worked perfectly for class-driven learning.

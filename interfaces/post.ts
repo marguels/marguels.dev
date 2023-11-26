@@ -33,6 +33,8 @@ export interface TocItem {
   export interface NodeObject {
     id: string;
     name: string;
+    parent?: boolean;
+    title?: string;
   }
   
   export interface LinkObject {
