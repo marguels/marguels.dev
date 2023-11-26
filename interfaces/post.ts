@@ -1,4 +1,5 @@
 export interface PostContent {
+    [x: string]: any;
     slug: string;
     date: string;
     title: string;
@@ -6,6 +7,7 @@ export interface PostContent {
     contentHtml: string;
     toc: TocItem[];
     obsidianLinks: ObsidianLinks;
+    sidebar: boolean;
   }
 
 export interface PostMetadata {
@@ -14,6 +16,7 @@ export interface PostMetadata {
     excerpt: string;
     slug: string;
     tags: string[];
+    sidebar: boolean;
 }
 
 export interface TocItem {

@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   max-height: 100vh;
+  width: 250px;
 }
 
 .sidebarButton {

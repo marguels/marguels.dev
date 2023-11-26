@@ -4,11 +4,9 @@ title: >
     Classification problems: a look in depth at the k-NN Classifier
 excerpt: >
     Understanding the Scikit-learn kNN classifier beyond simple usage.
-date: 2023-04-25 10:14:00-0400
-description: 
+date: 2023-04-25
 tags: data-science, machine-learning
-giscus_comments: true
-related_posts: false
+sidebar: true
 ---
 
 # Classification problems

@@ -9,7 +9,7 @@ const PostPage = async (props: any) => {
   const postData = await getPostContent(slug);
   return (
     <div className="post-container">
-      <Sidebar toc={postData.toc} />
+      {postData.sidebar ? <Sidebar toc={postData.toc} /> : ''}
       <div className="post-content">
         <div className="post-header">
           <Link href="/blog" className="back-link">Back to blog</Link>
@@ -22,7 +22,7 @@ const PostPage = async (props: any) => {
           <PostContent contentHtml={postData.contentHtml} />
         </article>
       </div>
-      <NetworkGraph data={postData.obsidianLinks}/>
+      {postData.obsidianLinks.links.length > 0 ? <NetworkGraph data={postData.obsidianLinks}/>: ''}
     </div>
   );
 };

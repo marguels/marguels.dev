@@ -51,11 +51,11 @@ export const getAllPostsMetadata = () : PostMetadata[] => {
     );
     const matterResult = matter(fileContents);
     const tags = matterResult.data.tags ? matterResult.data.tags.split(",") : [];
-    console.log(tags)
     return {
       title: matterResult.data.title,
       date: matterResult.data.date,
       excerpt: matterResult.data.excerpt,
+      sidebar: matterResult.data.sidebar,
       slug: fileName.replace(".md", ""),
       tags: tags || [],
     };
@@ -78,7 +78,7 @@ export const getPostContent = async (slug: string): Promise<PostContent> => {
   
   return {
     slug,
-    ...(data as { date: string; title: string; excerpt: string; }),
+    ...(data as { date: string; title: string; excerpt: string; sidebar: boolean }),
     contentHtml,
     toc,
     obsidianLinks,

@@ -260,6 +260,10 @@ a {
   background-color: var(--tag-7);
 }
 
+.tag-7 {
+  background-color: var(--tag-8);
+}
+
 .blog-intro {
   display: flex;
   flex-direction: column;
