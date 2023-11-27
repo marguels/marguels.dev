@@ -13,7 +13,7 @@ const PostPage = async (props: any) => {
       <div className="post-content">
         <div className="post-header">
           <Link href="/blog" className="back-link">Back to blog</Link>
-          <h1>{postData.title}</h1>
+          <h1 className="post-title">{postData.title}</h1>
           <h3>{postData.excerpt}</h3>
           <Date>{postData.date}</Date>
         </div>

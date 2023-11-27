@@ -33,7 +33,7 @@ const Sidebar = ({ toc }: SidebarProps) => {
         });
       },
       {
-        rootMargin: "50% 0px 0px 0px",
+        rootMargin: "0% 0px -40% 0px",
         threshold: 0.5,
       }
     );

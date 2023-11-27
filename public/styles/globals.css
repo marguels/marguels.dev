@@ -391,3 +391,8 @@ a {
   color: var(--accent-color);
   margin-right: 0.5rem;
 }
+
+.post-title {
+  color: var(--text-color);
+  font-size: 3rem;
+}
