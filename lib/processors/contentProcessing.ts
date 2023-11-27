@@ -36,7 +36,7 @@ export const processContent = async (
     .use(addClassToImages)
     .use(rehypeKatex)
     .use(rehypeSlug)
-    .use(headings, { behavior: "wrap" })
+    .use(headings, { behavior: "wrap", properties: {className: "heading-link"} })
     .use(rehypeStringify);
 
   const parsed = processor.parse(content);

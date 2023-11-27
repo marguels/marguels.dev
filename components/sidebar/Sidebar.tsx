@@ -33,8 +33,8 @@ const Sidebar = ({ toc }: SidebarProps) => {
         });
       },
       {
-        rootMargin: "-100px 0px 0px 0px",
-        threshold: 0.8,
+        rootMargin: "50% 0px 0px 0px",
+        threshold: 0.5,
       }
     );
 
@@ -54,11 +54,10 @@ const Sidebar = ({ toc }: SidebarProps) => {
   return (
     <div className={styles.sidebarContainer}>
       <h3 className={styles.tocTitle}>Table of content</h3>
-      <div className="outline-max" />
+      <div className={styles.outline} />
       <div className={styles.tocItems}>
         {toc.map((heading, index) => {
           const headingClass = `side-button-h${heading.depth + 1}`;
-
           return (
             <a
               href={`#${heading.id}`}

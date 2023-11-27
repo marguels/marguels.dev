@@ -379,3 +379,15 @@ a {
 .overlay.active {
   display: block;
 }
+
+.heading-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.heading-link:hover::before {
+  content: "#";
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
