@@ -130,7 +130,7 @@ a {
 }
 
 .post-content {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   grid-area: main;
   top: 10vh;
@@ -170,7 +170,6 @@ a {
 }
 
 .link:hover {
-  /* background: var(--accent-color); */
   text-decoration: underline 2px var(--accent-color);
   color: var(--accent-color);
 }
@@ -395,4 +394,11 @@ a {
 .post-title {
   color: var(--text-color);
   font-size: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .post-container {
+      display: grid;
+      grid-template-columns: 0.5fr 2.5fr 0.5fr;
+  }
 }
