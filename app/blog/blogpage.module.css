@@ -1,6 +1,8 @@
 .contentLayout {
     display: flex;
     flex-direction: row;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .mainContent {
@@ -29,5 +31,6 @@
 .allPosts {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1rem 2rem;
 }

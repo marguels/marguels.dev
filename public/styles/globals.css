@@ -115,8 +115,10 @@ a {
 .post-container {
   padding: 0 3rem;
   display: grid;
-  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-columns: 0.8fr 2.5fr 1fr;
   grid-template-areas: "sidebar main graph";
+  max-width: 1440px;
+  margin: 4rem auto;
 }
 
 .post-container > article {

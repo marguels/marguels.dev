@@ -4,9 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 100vh;
-  width: 250px;
+  max-height: 60vh;
+  max-width: 250px;
   grid-area: sidebar;
+  margin: 0 auto;
 }
 
 .sidebarButton {

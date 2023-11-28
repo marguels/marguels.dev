@@ -10,7 +10,6 @@ const BlogHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    console.log("open")
     setIsOpen(!isOpen);
   };
 
@@ -25,14 +24,12 @@ const BlogHeader = () => {
             Connecting the <span className="accent">Dots</span>
           </h1>
         </Link>
-        <nav>
+        <nav className={styles.burgerContainer}>
           <Burger isOpen={isOpen} toggleMenu={toggleMenu} grid={true} />
+          <Menu isOpen={isOpen} closeMenu={closeMenu}/>
         </nav>
       </div>
       <ScrollProgress />
-      <div className={styles.burger}>
-        <Menu isOpen={isOpen} closeMenu={closeMenu} />
-      </div>
     </header>
   );
 };

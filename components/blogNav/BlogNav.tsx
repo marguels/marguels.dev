@@ -5,7 +5,7 @@ import BlogNavElement from "./BlogNavElement";
 const BlogNav = () => {
   return (
     <div className={styles.blogNav}>
-      <h2 className={styles.navTitle}>🚧 Notes 🚧</h2>
+      <h2 className={styles.navTitle}>🚧 NOTES 🚧</h2>
       <div className={styles.elements}>
         <BlogNavElement
           title="Projects 🛠️"

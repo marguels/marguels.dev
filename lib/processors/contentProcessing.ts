@@ -45,7 +45,6 @@ export const processContent = async (
   const hastTree = (await processor.run(parsed)) as Root;
   const toc: TocItem[] = getToc(hastTree);
   const obsidianLinks: ObsidianLinks = getObsidianGraphData(slug, title, hastTree);
-  console.log(obsidianLinks);
 
   return { contentHtml: processor.stringify(hastTree), toc, obsidianLinks };
 };
