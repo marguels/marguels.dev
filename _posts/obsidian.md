@@ -5,6 +5,7 @@ excerpt: >
     Essential informations and how I manage my second brain. 🧠
 date: 2023-11-26
 tags: organisation, notes, obsidian
+growth: 0
 sidebar: true
 ---
 

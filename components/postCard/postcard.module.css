@@ -3,20 +3,21 @@
     flex-direction: column;
     gap: 0.5rem;
     width: 280px;
+    height: fit-content;
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: #fff;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
     border-radius: 2%;
-    box-shadow: 3px 3px 2px rgb(13, 53, 45);
+    box-shadow: 1px 1px 2px rgb(13, 53, 45);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--text-color);
-    border-left: 3px solid var(--accent-color);
 }
 
 .cardContainer:hover {
-    box-shadow: 1px 1px 2px rgb(13, 53, 45);
+    box-shadow: 3px 3px 2px rgb(13, 53, 45);
+    transform: scale(1.05);
+    border-top: 3px solid var(--accent-color);
 }
 
 .cardDescription {
@@ -29,4 +30,10 @@
     font-weight: 500;
     text-decoration: none;
     color: var(--text-color);
+}
+
+.growth {
+    color: green;
+    align-self: flex-end;
+    font-size: 0.8rem;
 }

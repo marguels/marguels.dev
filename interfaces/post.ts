@@ -17,6 +17,7 @@ export interface PostMetadata {
     slug: string;
     tags: string[];
     sidebar: boolean;
+    growth: number;
 }
 
 export interface TocItem {

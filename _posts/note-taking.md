@@ -1,8 +1,11 @@
 ---
-title: Note taking
-excerpt: A simple and essential art to sharpen our thinking.
+title: >
+    Note taking
+excerpt: >
+    A simple and essential art to sharpen our thinking.
 date: 2023-11-26
 tags: organisation, notes, obsidian
+growth: 1
 sidebar: false
 ---
 # The art of taking notes

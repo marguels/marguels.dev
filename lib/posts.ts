@@ -56,6 +56,7 @@ export const getAllPostsMetadata = () : PostMetadata[] => {
       date: matterResult.data.date,
       excerpt: matterResult.data.excerpt,
       sidebar: matterResult.data.sidebar,
+      growth: matterResult.data.growth,
       slug: fileName.replace(".md", ""),
       tags: tags || [],
     };
@@ -77,6 +78,7 @@ export const getPostMetadataBySlug = (slug: string) : PostMetadata | null | unde
         date: matterResult.data.date,
         excerpt: matterResult.data.excerpt,
         sidebar: matterResult.data.sidebar,
+        growth: matterResult.data.growth,
         slug: slug,
         tags: tags || [],
       };
@@ -110,4 +112,10 @@ export const getPostContent = async (slug: string): Promise<PostContent> => {
   };
 };
 
-
+export enum GrowthEnum {
+  "Seedling 🌱",
+  "Sprout 🌿",
+  "Sapling 🪴",
+  "Bush 🌳",
+  "Tree 🌲",
+}

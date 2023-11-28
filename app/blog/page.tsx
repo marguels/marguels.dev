@@ -49,53 +49,6 @@ export default function BlogPage() {
   const uniqueTags = [...new Set(tags)];
   return (
     <div className={styles.contentLayout}>
-      {/* <div className={styles.blogNav}>
-        <details>
-          <summary>🔧 Projects</summary>
-          <ul>
-            <li>
-              <Link href="/projects/subproject1" className={styles.navLink}>
-                Subproject 1
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects/subproject2" className={styles.navLink}>
-                Subproject 2
-              </Link>
-            </li>
-          </ul>
-        </details>
-        <details>
-          <summary>💻 Programming</summary>
-          <ul>
-            <li>
-              <Link href="/programming/topic1" className={styles.navLink}>
-                Topic 1
-              </Link>
-            </li>
-            <li>
-              <Link href="/programming/topic2" className={styles.navLink}>
-                Topic 2
-              </Link>
-            </li>
-          </ul>
-        </details>
-        <details>
-          <summary>🧿 Large Language Models</summary>
-          <ul>
-            <li>
-              <Link href="/blog/llm/topic1" className={styles.navLink}>
-                Topic 1
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog/llm/topic2" className={styles.navLink}>
-                Topic 2
-              </Link>
-            </li>
-          </ul>
-        </details>
-      </div> */}
       <BlogNav />
       <div className={styles.mainContent}>
         <div className={styles.blogDescription}>
