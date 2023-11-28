@@ -1,0 +1,53 @@
+.headerContainer {
+  background-color: var(--foreground);
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
+  height: 40px;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--delim-color);
+}
+
+.navbar {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scrollbar {
+  height: 3px;
+  background-color: var(--link-color);
+  width: 0;
+}
+
+.title h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar ul > li {
+  margin: 0.2rem 0.5rem;
+}
+
+.burger {
+  display: block;
+  cursor: pointer;
+  margin-right: 1rem;
+}

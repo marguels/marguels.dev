@@ -1,0 +1,84 @@
+
+.blogNav {
+    /* grid-area: nav; */
+    border-right: solid 1px black;
+    top: 0;
+    /* padding: 1rem; */
+    /* width: 300px; */
+    min-width: 250px;
+    /* background-color: rgb(74,73,91, 0.5); */
+    background-color: rgb(239,241,248, 0.5);
+    color: var(--text-color);
+    /* font-family: 'Roboto Mono', monospace; */
+}
+
+.navTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-bottom: 0.3rem;
+    text-align: left;
+    border-bottom: solid 1px rgb(74,73,91, 0.5);
+}
+
+.elements {
+    padding: 0 1rem;
+
+}
+
+.navElement {
+  font-size: 0.9rem;
+}
+
+.folder {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+  }
+  
+  .folder:hover {
+    background-color: rgb(74,73,91, 0.5);
+    color: var(--text-color);
+  }
+
+  .folderIcon {
+    fill: var(--text-color);
+    margin-right: 6px;
+    transform: rotate(0deg);
+    transition: fill 0.3s ease;
+  }
+  
+  .folder:hover .folderIcon {
+    fill: var(--text-color); /* Color on hover */
+  }
+
+  .folderIcon.open {
+    transform: rotate(90deg);
+  }
+  
+  .folder.open {
+    border-left: 4px solid #666;
+    font-weight: bold;
+  }
+
+  .list {
+    list-style-type: none;
+    border-left: solid rgb(74,73,91, 0.6) 1px;
+    margin: 0 1.2rem;
+    padding-left: 1rem;
+  }
+  
+  .list li {
+    padding: 0.3rem 0; /* Adjust as needed */
+  }
+  
+  .list li a {
+    color: var(--text-color); /* Adjust as needed */
+    text-decoration: none; /* Removes the underline */
+  }
+  
+  .list li a:hover {
+    /* background-color: rgb(239,241,248, 0.5); */
+    color: var(--accent-color);
+    /* text-decoration: underline; Adds underline on hover */
+  }
