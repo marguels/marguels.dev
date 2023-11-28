@@ -85,10 +85,15 @@ export default function BlogPage() {
             than happy!
             <br />
             <br />
-            
           </p>
         </div>
-        <div className="ccc">🌱🌿🪴🌳🌲</div>
+        <div className="crow">
+          <span className="zoom">🌱</span>
+          <span className="zoom">🌿</span>
+          <span className="zoom">🪴</span>
+          <span className="zoom">🌳</span>
+          <span className="zoom">🌲</span>
+        </div>
         <div className="recent-posts">
           <h2>Recently updated</h2>
           <div className={styles.allPosts}>{postPreviews}</div>
