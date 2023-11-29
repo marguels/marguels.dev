@@ -29,7 +29,7 @@ const Header = () => {
         </div>
         <nav>
           <div className={styles.burger}>
-            <Burger isOpen={isOpen} toggleMenu={toggleMenu} />
+            <Burger isOpen={isOpen} toggleMenu={toggleMenu} grid={true}/>
           </div>
           <ul>
             <li>
@@ -51,9 +51,6 @@ const Header = () => {
         </nav>
       </div>
       <ScrollProgress />
-      <div className={styles.burger}>
-        <Menu isOpen={isOpen} closeMenu={closeMenu} />
-      </div>
     </header>
   );
 };

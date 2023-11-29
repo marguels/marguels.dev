@@ -96,7 +96,6 @@ h1 {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  flex: 1;
 }
 
 main {
@@ -193,17 +192,6 @@ a {
 .primary-list {
   list-style-type: none;
 }
-
-/* .pill {
-  display: inline-block;
-  color: var(--text-color);
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 20px;
-  
-  opacity: 80%;
-  font-size: small;
-} */
 
 .tags-container {
   display: flex;
