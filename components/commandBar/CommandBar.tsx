@@ -69,7 +69,7 @@ const CommandBar: React.FC<CommandBarProps> = ({ children }) => {
     {
       id: "blogAction",
       name: "Blog",
-      shortcut: ["g", "b"],
+      shortcut: ["b"],
       keywords: "blog dots articles",
       section: "Navigation",
       icon: <FaBook />,
@@ -78,7 +78,7 @@ const CommandBar: React.FC<CommandBarProps> = ({ children }) => {
     {
       id: "githubAction",
       name: "Github",
-      shortcut: ["g", "h"],
+      shortcut: ["g"],
       keywords: "sourcecode",
       section: "Navigation",
       icon: <FaGithub />,
