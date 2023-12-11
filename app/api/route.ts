@@ -1,6 +1,8 @@
-import { getAllPostsMetadata } from "@/lib/posts";
+import { getAllPostsMetadata, getGraphData } from "@/lib/posts";
 
 export async function GET(request: Request) {
-    const posts = await getAllPostsMetadata();
-    return await Response.json(await posts);
+    const metadata = await getAllPostsMetadata();
+    const graphData = await getGraphData();
+    const response = {metadata, graphData}
+    return await Response.json(response);
 }

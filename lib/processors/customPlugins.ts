@@ -13,7 +13,7 @@ import { Link } from "mdast";
 import slugify from "slugify";
 import { getPostMetadataBySlug } from "../posts";
 
-const BRACKET_LINK_REGEX =
+export const BRACKET_LINK_REGEX =
   /\[\[([a-zA-ZÀ-ÿ0-9-'?%.():&,+/€! ]+)#?([a-zA-ZÀ-ÿ0-9-'?%.():&,+/€! ]+)?\|?([a-zA-ZÀ-ÿ0-9-'?%.():&,+/€! ]+)?\]\]/g;
 
 export const addClassToImages: Plugin = (): Transformer => {

@@ -13,9 +13,7 @@ sidebar: true
 A template is a pre-designed format or structure that serves as a starting point for creating something. It's a reusable pattern or blueprint that outlines the layout, design, or content organization for various purposes.
 
 I've struggled for years to harness the power of templates in my tool for knowledge collection. This at least until I exercised my writing skills and stopped doing only brain dumping when doing [[note-taking|digital note-taking]].
-
-Then something clicked.
-It became clear to me that a template is a framework to streamline *any* process.
+_Then something clicked_. It became clear to me that a template is a framework to streamline *any* process.
 
 The more I got interested into organising and sharing my knowledge, the more my notes needed to have a structure which would start me off with pure and simple writing, without falling in the pit of *analysis paralysis*.
 

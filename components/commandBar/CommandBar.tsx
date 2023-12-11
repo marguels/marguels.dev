@@ -1,115 +1,102 @@
 "use client";
-import { Action, KBarProvider, useRegisterActions } from "kbar";
-import { useRouter } from "next/navigation";
-import React, { ReactNode, useEffect, useMemo, useState } from "react";
-import { FaBook, FaGithub, FaHome, FaSearch } from "react-icons/fa";
-import InternalCommand from "./InternalCommand";
-import { PostMetadata } from "@/interfaces/post";
+import {
+  KBarAnimator,
+  KBarPortal,
+  KBarPositioner,
+  KBarResults,
+  KBarSearch,
+  useKBar,
+  useMatches,
+  ActionImpl,
+  VisualState,
+} from "kbar";
+import React, { useEffect } from "react";
+import styles from "./commandbar.module.css";
 
-interface ActionProviderProps {
-  actions: Action[];
-}
-
-interface CommandBarProps {
-  children: ReactNode;
-}
-
-const CommandBar: React.FC<CommandBarProps> = ({ children }) => {
-  const router = useRouter();
-  const navigate = (url: string) => {
-    router.push(url);
-  };
-
-  const [results, setResults] = useState<PostMetadata[] | undefined>();
-  const [shouldRenderActionProvider, setShouldRenderActionProvider] =
-    useState(false);
+const CommandBar = () => {
+  const { visualState } = useKBar((state) => state);
 
   useEffect(() => {
-    fetch("/api")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setResults([...data]);
-      });
-  }, []);
-
-  const searchActions = useMemo(() => {
-    if (!results) return null;
-
-    return results.map((item) => {
-      return {
-        id: item.slug,
-        parent: "digitalGardenAction",
-        name: item.title,
-        shortcut: [],
-        section: "Digital garden",
-        keywords: [item.title, item.slug].join(" "),
-        perform: () => router.push(`/blog/${item.slug}`),
-      };
-    });
-  }, [results]);
-
-  useEffect(() => {
-    if (searchActions && shouldRenderActionProvider === false) {
-      setShouldRenderActionProvider(true);
-    }
-  }, [searchActions]);
-
-  const actions: Action[] = [
-    {
-      id: "homeAction",
-      name: "Home",
-      shortcut: ["h"],
-      keywords: "back",
-      section: "Navigation",
-      perform: () => navigate("/"),
-      icon: <FaHome />,
-    },
-    {
-      id: "blogAction",
-      name: "Blog",
-      shortcut: ["b"],
-      keywords: "blog dots articles",
-      section: "Navigation",
-      icon: <FaBook />,
-      perform: () => navigate("/blog"),
-    },
-    {
-      id: "githubAction",
-      name: "Github",
-      shortcut: ["g"],
-      keywords: "sourcecode",
-      section: "Navigation",
-      icon: <FaGithub />,
-      perform: () => window.open("https://github.com/marguels", "_blank"),
-    },
-    {
-      id: "digitalGardenAction",
-      name: "Search through my notes",
-      shortcut: ["?"],
-      keywords: "search articles notes",
-      section: "Digital garden",
-      icon: <FaSearch />,
-    },
-  ];
+    console.log(visualState);
+  }, [visualState]);
 
   return (
-    <KBarProvider actions={actions}>
-      {children}
-      <InternalCommand />
-      {searchActions && shouldRenderActionProvider && (
-        <ActionProvider actions={searchActions} />
-      )}
-    </KBarProvider>
+    <>
+    {visualState !== VisualState.hidden && <div className={styles.backdrop}></div>}
+    <KBarPortal>
+      <KBarPositioner className={styles.positioner}>
+        <KBarAnimator className={styles.kbarAnimator}>
+          <div className={styles.kbarContent}>
+            <KBarSearch placeholder="Search" className={styles.searchBar} />
+            <div className={styles.kbarResults}>
+              <RenderResults />
+            </div>
+          </div>
+        </KBarAnimator>
+      </KBarPositioner>
+    </KBarPortal>
+    </>
   );
 };
 
-const ActionProvider: React.FC<ActionProviderProps> = React.memo(
-  ({ actions }) => {
-    useRegisterActions(actions, [actions]);
-    return null;
-  }
-);
+const RenderResults = () => {
+  const { results } = useMatches();
+
+  return (
+    <KBarResults
+      items={results}
+      onRender={({ item, active }) => {
+        return typeof item === "string" ? (
+            <div className={styles.actionCategoryWrapper}>
+                <h2 className={styles.actionCategory}>{item} </h2>
+            </div>
+        ) : (
+          <ResultItem action={item} active={active} />
+        );
+      }}
+    />
+  );
+}
+
+const ResultItem = React.forwardRef(function ResultItem(
+  { action, active }: { action: ActionImpl; active: boolean },
+  ref: React.Ref<HTMLDivElement>
+) {
+  return (
+    <div
+      ref={ref}
+      className={`${styles.kbarResultItem} ${active ? styles.active : ""}`}
+    >
+      <header className={styles.actionContainer}>
+        {action.icon}
+        <div className={styles.actionItem}>
+          <h1 className={styles.actionTitle}> {action.name} </h1>
+        </div>
+      </header>
+      <div className="text-[15px] leading-none text-violet11 rounded flex justify-between items-center relative select-none outline-none hover:bg-violet4">
+        {action.shortcut?.length ? (
+          <div
+            aria-hidden
+            style={{ display: "grid", gridAutoFlow: "column", gap: "4px" }}
+          >
+            {action.shortcut.map((sc) => (
+              <kbd
+                key={sc}
+                style={{
+                  padding: "4px 6px",
+                  background: "rgba(0 0 0 / .1)",
+                  borderRadius: "4px",
+                  fontSize: 14,
+                }}
+              >
+                {sc}
+              </kbd>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+});
 
 export default CommandBar;

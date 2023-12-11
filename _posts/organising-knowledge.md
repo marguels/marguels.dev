@@ -16,6 +16,7 @@ Switching to a more unstructured learning, like in my job as a Software Engineer
 I'd love this journey to be an opportunity for a deep dive into search strategies and search engines as well.
 In this ambition for an organisation system easy to navigate for others, there is a personal project I'm currently working on. Natural Languages semantic searches have taken it the extra step: creating my own small app for querying my notes. Soon to come! :)
 
+
 ## Strategy
 What I know so far is _**when**_ I start writing a note, and _**how**_ I search for it once I need some information back.
 

@@ -7,6 +7,7 @@ date: 2023-11-26
 tags: organisation, notes, obsidian
 growth: 1
 sidebar: false
+related: obsidian, sketch-with-ipad
 ---
 # The art of taking notes
 

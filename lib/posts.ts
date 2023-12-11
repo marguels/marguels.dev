@@ -5,6 +5,7 @@ import { PostContent, PostMetadata } from "@/interfaces/post";
 import { processContent } from "./processors/contentProcessing";
 
 const postsDirectory = path.join(process.cwd(), "_posts");
+const graphDataDirectory = path.join(process.cwd(), "_data");
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
@@ -112,6 +113,11 @@ export const getPostContent = async (slug: string): Promise<PostContent> => {
   };
 };
 
+export const getGraphData = async () => {
+  const mockDataPath = path.join(graphDataDirectory, 'mockData.json');
+  return JSON.parse(await fs.readFileSync(mockDataPath, 'utf-8'));
+}
+
 export enum GrowthEnum {
   "Seedling 🌱",
   "Sprout 🌿",
@@ -119,3 +125,4 @@ export enum GrowthEnum {
   "Bush 🌳",
   "Tree 🌲",
 }
+

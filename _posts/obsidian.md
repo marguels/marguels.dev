@@ -14,6 +14,7 @@ sidebar: true
 [Obsidian](https://obsidian.md) is an incredible project, which I don't aim to explain entirely. This network of pages is meant to share what I've learned about Obsidian and how I came to form my opinions about ways of using it.
 My main use is for all stages of [[note-taking|note-taking]], where at the same time I can refine some documents and dump coarse information.
 
+
 ## Vaults
 
 > **Vaults**: A vault is a folder on your local file system where Obsidian stores your notes. You can keep all your notes in one vault, or create several vaults for each of your different projects. ([docs](https://help.obsidian.md/Getting+started/Create+a+vault))
