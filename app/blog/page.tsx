@@ -5,40 +5,6 @@ import styles from "./blogpage.module.css";
 import NetworkGraph from "@/components/networkGraph/NetworkGraph";
 import BlogNav from "@/components/blogNav/BlogNav";
 
-const mockData = {
-  nodes: [
-    {
-      id: "note-taking",
-      name: "note-taking",
-      parent: false,
-      title: "Note taking",
-    },
-    {
-      id: "organising-knowledge",
-      name: "a different chaos",
-      parent: false,
-      title: "Organisation system\n",
-    },
-    {
-      id: "obsidian-templates",
-      name: "custom templates",
-      parent: false,
-      title: "",
-    },
-    {
-      id: "obsidian",
-      name: "Obsidian",
-      parent: true,
-      title: "Obsidian\n",
-    },
-  ],
-  links: [
-    { source: "obsidian", target: "note-taking" },
-    { source: "obsidian", target: "organising-knowledge" },
-    { source: "obsidian", target: "obsidian-templates" },
-  ],
-};
-
 export default async function BlogPage() {
   const postMetadata = getAllPostsMetadata();
   const graphData = await getGraphData();

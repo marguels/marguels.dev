@@ -114,8 +114,8 @@ export const getPostContent = async (slug: string): Promise<PostContent> => {
 };
 
 export const getGraphData = async (): Promise<ObsidianLinks> => {
-  const mockDataPath = path.join(graphDataDirectory, 'mockData.json');
-  return JSON.parse(await fs.readFileSync(mockDataPath, 'utf-8'));
+  const graphDataPath = path.join(graphDataDirectory, 'graphData.json');
+  return JSON.parse(await fs.readFileSync(graphDataPath, 'utf-8'));
 }
 
 export enum GrowthEnum {
