@@ -1,4 +1,4 @@
-import { getAllPostsMetadata } from "@/lib/posts";
+import { getAllPostsMetadata, getGraphData } from "@/lib/posts";
 import PostCard from "@/components/postCard/PostCard";
 import Link from "next/link";
 import styles from "./blogpage.module.css";
@@ -39,8 +39,9 @@ const mockData = {
   ],
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
   const postMetadata = getAllPostsMetadata();
+  const graphData = await getGraphData();
   const tags: string[] = [];
   const postPreviews = postMetadata.map((post) => {
     tags.push(...post.tags);
@@ -100,7 +101,7 @@ export default function BlogPage() {
         </div>
       </div>
       <div className={styles.graph}>
-        <NetworkGraph data={mockData} />
+        <NetworkGraph data={graphData} />
       </div>
     </div>
   );

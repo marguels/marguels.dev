@@ -3,8 +3,9 @@ import { Action, KBarProvider, useRegisterActions } from "kbar";
 import { useRouter } from "next/navigation";
 import React, { ReactNode, useEffect, useMemo, useState } from "react";
 import { FaBook, FaGithub, FaHome, FaSearch } from "react-icons/fa";
-import CommandBar from "./CommandBar";
+import CommandBar from "../components/commandBar/CommandBar";
 import { PostMetadata } from "@/interfaces/post";
+import { useData } from "@/data/context/dataContext";
 
 interface ActionProviderProps {
   actions: Action[];
@@ -14,30 +15,22 @@ interface CommandBarProviderProps {
   children: ReactNode;
 }
 
-const CommandBarProvider: React.FC<CommandBarProviderProps> = ({ children }) => {
+const CommandBarProvider: React.FC<CommandBarProviderProps> = ({
+  children,
+}) => {
   const router = useRouter();
   const navigate = (url: string) => {
     router.push(url);
   };
-
-  const [results, setResults] = useState<PostMetadata[] | undefined>();
   const [shouldRenderActionProvider, setShouldRenderActionProvider] =
     useState(false);
 
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setResults([...data.metadata]);
-      });
-  }, []);
+  const { metadata } = useData();
 
   const searchActions = useMemo(() => {
-    if (!results) return null;
+    if (!metadata) return null;
 
-    return results.map((item) => {
+    return metadata.map((item) => {
       return {
         id: item.slug,
         parent: "digitalGardenAction",
@@ -48,7 +41,7 @@ const CommandBarProvider: React.FC<CommandBarProviderProps> = ({ children }) => 
         perform: () => router.push(`/blog/${item.slug}`),
       };
     });
-  }, [results]);
+  }, [metadata]);
 
   useEffect(() => {
     if (searchActions && shouldRenderActionProvider === false) {

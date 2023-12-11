@@ -36,13 +36,16 @@ async function updateMockData() {
         const link = match[2]
               ? `${baseLink}#${slugify(match[1], { lower: true })}`
               : baseLink;
+        if(!mockData.nodes.find(node => node.id === baseLink)) return;
         return {
             source: slug,
             target: link,
         };
     });
 
-    for (const link of links) {
+    const validLinks = links.filter(Boolean);
+
+    for (const link of validLinks) {
         if (!mockData.links.find(l => l.source === link.source && l.target === link.target)) {
             mockData.links.push(link);
         }

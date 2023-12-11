@@ -16,7 +16,7 @@ Sometimes I find myself impressed with my ability to remember _that thing_. As I
 
 I've been trying different note-taking systems, mostly developed for pen and paper, and by the time of my M.Sc. studies, I was writing visually pleasing, colour-coded, book-like notes. I loved that, and it worked perfectly for class-driven learning.
 
-![paper-notes-2.jpeg](/assets/paper-notes-2.jpeg)
+![paper-notes-2.jpeg](/assets/paper-notes-2.jpeg) 
 
 Effective note-taking means not repeating the work of skimming through manuals each time you want to remember a concept, or do a half-reliable google search, where each time you'll have to double-check the reliability of the source.
 This became increasingly essential as I started working as a Software Engineer, where most of my work is troubleshooting, researching and building from scratch. Soon I realised that if I lose most of my time in repeating researches I do on a regular basis, without centralising that knowledge, I couldn't be as fast at solving them and dedicate the extra time to learn about _deeper issue_ underlying it.

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { PostContent, PostMetadata } from "@/interfaces/post";
+import { ObsidianLinks, PostContent, PostMetadata } from "@/interfaces/post";
 import { processContent } from "./processors/contentProcessing";
 
 const postsDirectory = path.join(process.cwd(), "_posts");
@@ -113,7 +113,7 @@ export const getPostContent = async (slug: string): Promise<PostContent> => {
   };
 };
 
-export const getGraphData = async () => {
+export const getGraphData = async (): Promise<ObsidianLinks> => {
   const mockDataPath = path.join(graphDataDirectory, 'mockData.json');
   return JSON.parse(await fs.readFileSync(mockDataPath, 'utf-8'));
 }

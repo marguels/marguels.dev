@@ -41,4 +41,5 @@ export interface TocItem {
   export interface LinkObject {
     source: string;
     target: string;
+    width?: number;
   }

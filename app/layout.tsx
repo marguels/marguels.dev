@@ -4,7 +4,7 @@ import "katex/dist/katex.min.css";
 
 import Head from "next/head";
 import Footer from "@/components/footer/Footer";
-import CommandBarProvider from "@/components/commandBar/CommandBarProvider";
+import { Providers } from "@/data/Providers";
 
 export const metadata: { title: string; description: string } = {
   title: "Marguino",
@@ -26,7 +26,7 @@ export default function RootLayout({
       </Head>
       <body>
         <div className="main-content">
-          <CommandBarProvider>{children}</CommandBarProvider>
+          <Providers>{children}</Providers>
         </div>
         <Footer />
       </body>
