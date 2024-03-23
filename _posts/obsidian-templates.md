@@ -7,6 +7,7 @@ date: 2023-12-02
 tags: obsidian, notes, organisation
 growth: 2
 sidebar: true
+category: Knowledge organisation
 ---
 # What are obsidian templates?
 

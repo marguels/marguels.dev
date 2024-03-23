@@ -7,6 +7,7 @@ date: 2023-04-25
 tags: data-science, machine-learning
 growth: 3
 sidebar: true
+category: Data science
 ---
 
 # Classification problems

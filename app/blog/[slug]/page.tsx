@@ -1,28 +1,39 @@
 import { getPostContent, getAllPostsMetadata } from "@/lib/posts";
 import Link from "next/link";
-import Sidebar from "@/components/sidebar/Sidebar";
+import Sidebar from "@/components/toc/Toc";
 import { PostContent } from "@/components/postContent/PostContent";
 import NetworkGraph from "@/components/networkGraph/NetworkGraph";
+import styles from "./post.module.css";
 
 const PostPage = async (props: any) => {
   const slug = props.params.slug;
   const postData = await getPostContent(slug);
   return (
-    <div className="post-container">
-      {postData.sidebar ? <Sidebar toc={postData.toc} /> : ''}
-      <div className="post-content">
+    <div className={styles.postContainer}>
+      <div className={styles.fileExplorer}/>
+      
+      <div className={styles.postContent}>
         <div className="post-header">
-          <Link href="/blog" className="back-link">Back to blog</Link>
-          <h1 className="post-title">{postData.title}</h1>
+          <Link href="/blog" className={styles.backLink}>Back to blog</Link>
+          <h1 className={styles.postTitle}>{postData.title}</h1>
+          <div className={styles.postMetadata}>
           <h3>{postData.excerpt}</h3>
-          <Date>{postData.date}</Date>
+            <Date>{postData.date}</Date>
+          </div>
         </div>
         <div className="outline-max"/>
         <article>
           <PostContent contentHtml={postData.contentHtml} />
         </article>
       </div>
-      {postData.obsidianLinks.links.length > 0 ? <NetworkGraph data={postData.obsidianLinks}/>: ''}
+      <div className={styles.contentExplorer}>
+      {postData.obsidianLinks.links.length > 0 ? 
+          <NetworkGraph data={postData.obsidianLinks}/> 
+         : ''}
+      {postData.sidebar ?
+        <Sidebar toc={postData.toc} />
+        : ''}
+      </div>
     </div>
   );
 };

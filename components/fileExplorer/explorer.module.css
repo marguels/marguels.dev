@@ -1,19 +1,24 @@
 
 .blogNav {
-    border-right: solid 1px black;
-    top: 0;
-    min-width: 280px;
+    /* border-right: solid 1px black; */
+    top: 20px;
+    min-width: 300px;
+    width: 300px;
     padding-top: 3rem;
-    color: var(--text-color);
+    color: var(--text);
+    background-color: var(--crust);
+    font-family: 'Agave NerdFont', sans-serif;
+    position: fixed;
+    height: 100%;
 }
 
 .navTitle {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
     padding-left: 2rem;
     padding-bottom: 0.3rem;
     text-align: left;
-    /* border-bottom: solid 1px rgb(74,73,91, 0.5); */
+    color: var(--yellow)
 }
 
 .elements {
@@ -22,11 +27,12 @@
 }
 
 .navElement {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .folder {
     padding: 5px 10px;
+    color: var(--blue);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -35,21 +41,19 @@
   }
   
   .folder:hover {
-    /* background-color: rgb(74,73,91, 0.5); */
-    /* box-shadow: 1px 1px 1px 0px rgb(13, 53, 45); */
     transform: scale(1.03);
-    color: var(--text-color);
+    color: var(--mauve);
   }
 
   .folderIcon {
-    fill: var(--text-color);
-    margin-right: 6px;
+    margin-right: 12px;
     transform: rotate(0deg);
     transition: fill 0.3s ease;
+    color: var(--blue);
   }
   
   .folder:hover .folderIcon {
-    fill: var(--accent-color);
+    color: var(--yellow);
   }
 
   .folderIcon.open {
@@ -57,13 +61,13 @@
   }
   
   .folder.open {
-    border-left: 4px solid var(--delim-color);
+    border-left: 4px solid var(--lavender);
     font-weight: bold;
   }
 
   .list {
     list-style-type: none;
-    border-left: solid rgb(74,73,91, 0.6) 1px;
+    border-left: solid var(--blue) 1px;
     margin: 0 1.3rem;
     padding-left: 2rem;
   }
@@ -73,11 +77,11 @@
   }
   
   .list li a {
-    color: var(--text-color);
+    color: var(--text);
     text-decoration: none;
     transition: all 0.3s ease;
   }
   
   .list li a:hover {
-    color: var(--accent-color);
+    color: var(--mauve);
   }

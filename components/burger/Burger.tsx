@@ -15,7 +15,7 @@ const Burger = ({ isOpen, toggleMenu, grid }: BurgerProps) => {
   const kbar = useKBar();
   
   return (
-    <div className={isOpen ? styles.open : styles.hide} onClick={kbar.query.toggle}>
+    <div className={styles.fitSvg && isOpen ? styles.open : styles.hide} onClick={kbar.query.toggle}>
      {grid ? <FiCommand size={26}/> : <MenuIcon />}
     </div>
   );

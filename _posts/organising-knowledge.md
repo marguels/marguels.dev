@@ -7,6 +7,7 @@ date: 2023-11-26
 tags: organisation, notes, obsidian
 growth: 0
 sidebar: false
+category: Knowledge organisation
 ---
 
 # Organising knowledge

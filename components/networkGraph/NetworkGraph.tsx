@@ -19,7 +19,8 @@ const NetworkGraph = ({ data }: NetworkGraphProps) => {
 
   useEffect(() => {
     if (fgRef.current) {
-      fgRef.current.zoomToFit(1000); // Adjust the duration (1000 ms in this case) as needed
+      fgRef.current.zoomToFit(1000);
+      fgRef.current.d3Force("charge")?.distanceMax(50);
     }
   }, []);
 
@@ -33,21 +34,20 @@ const NetworkGraph = ({ data }: NetworkGraphProps) => {
           nodeCanvasObject={(node, ctx, globalScale) => {
             if (typeof node.id === "string" && node.x && node.y) {
               const radius = (node as any).parent
-                ? globalScale
-                : globalScale / 1.5;
+                ? globalScale * 1.5
+                : globalScale / 1.2;
               ctx.beginPath();
               ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
               ctx.fillStyle =
-                node.id === hoveredNode
-                  ? "rgba(108, 99, 255, 1)"
-                  : "rgba(74, 73, 91, 0.9)";
+                node.id === hoveredNode || (node as any).parent
+                  ? "rgba(245, 169, 127, 1)"
+                  : "rgba(139, 213, 202, 0.9)";
               ctx.fill();
 
-              // Add text title below the node
               const fontSize = 4;
               ctx.font = `${fontSize}px Arial`;
               ctx.textAlign = "center";
-              ctx.fillStyle = "rgba(74, 73, 91, 0.9)";
+              ctx.fillStyle = "rgba(183, 189, 248, 0.9)";
               ctx.fillText(
                 node.title ? node.title : node.id,
                 node.x,
@@ -57,11 +57,9 @@ const NetworkGraph = ({ data }: NetworkGraphProps) => {
           }}
           width={200}
           height={200}
-          linkColor={() => "rgba(74, 73, 91, 0.6)"}
+          linkColor={() => "rgba(183, 189, 248, 0.6)"}
           linkWidth={() => 1}
           graphData={data}
-          // d3AlphaDecay={0.00228}
-          // d3VelocityDecay={0.4}
           onNodeClick={(
             node: { id?: string | number; label?: string },
             event: MouseEvent

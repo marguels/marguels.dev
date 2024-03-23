@@ -6,18 +6,18 @@
     height: fit-content;
     margin-bottom: 1rem;
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--mantle);
     transition: all 0.2s ease-in-out;
     border-radius: 2%;
     box-shadow: 1px 1px 2px rgb(13, 53, 45);
     transition: border-top 0.3s ease, box-shadow 0.5s ease, scale 0.5s ease;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--blue);
 }
 
 .cardContainer:hover {
     box-shadow: 3px 3px 2px rgb(13, 53, 45);
     transform: scale(1.05);
-    border-top: 3px solid var(--accent-color);
+    border-top: 3px solid var(--peach);
 }
 
 .cardDescription {
@@ -29,11 +29,11 @@
     font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--mauve);
 }
 
 .growth {
-    color: green;
+    color: var(--green);
     align-self: flex-end;
     font-size: 0.8rem;
 }

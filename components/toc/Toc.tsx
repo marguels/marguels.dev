@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { TocItem } from "@/interfaces/post";
-import styles from "./sidebar.module.css";
+import styles from "./toc.module.css";
 
-interface SidebarProps {
+interface TocProps {
   toc: TocItem[];
 }
 
@@ -20,7 +20,7 @@ const handleClick = (id: string, event: React.MouseEvent) => {
   });
 };
 
-const Sidebar = ({ toc }: SidebarProps) => {
+const Toc = ({ toc }: TocProps) => {
   const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const Sidebar = ({ toc }: SidebarProps) => {
   }, [toc]);
 
   return (
-    <div className={styles.sidebarContainer}>
+    <div className={styles.tocContainer}>
       <h3 className={styles.tocTitle}>Table of content</h3>
       <div className={styles.outline} />
       <div className={styles.tocItems}>
@@ -76,4 +76,4 @@ const Sidebar = ({ toc }: SidebarProps) => {
   );
 };
 
-export default Sidebar;
+export default Toc;

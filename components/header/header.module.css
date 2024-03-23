@@ -1,5 +1,5 @@
 .headerContainer {
-  background-color: var(--foreground);
+  background-color: var(--crust);
   position: sticky;
   top: 0;
   width: 100%;
@@ -14,7 +14,7 @@
   content: "";
   display: block;
   height: 1px;
-  background-color: var(--delim-color);
+  background-color: var(--lavender);
 }
 
 .navbar {
@@ -29,7 +29,7 @@
 
 .scrollbar {
   height: 3px;
-  background-color: var(--link-color);
+  background-color: var(--mauve);
   width: 0;
   position: relative;
 }

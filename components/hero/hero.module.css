@@ -20,7 +20,7 @@
 }
 
 .heroContent {
-  background-color: var(--background);
+  /* background-color: var(--background); */
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -59,14 +59,14 @@
 }
 
 .heroButton {
-  background-color: var(--accent-color);
-  color: var(--foreground);
+  background-color: var(--teal);
+  color: var(--mantle);
   margin-right: 1rem;
 }
 
 .altButton {
-  background-color: var(--foreground);
-  color: var(--accent-color);
+  background-color: var(--peach);
+  color: var(--mantle);
 }
 
 .altButtonLink {

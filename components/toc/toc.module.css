@@ -1,26 +1,24 @@
-.sidebarContainer {
-  position: sticky;
-  top: 25vh;
+.tocContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-height: 60vh;
   max-width: 250px;
-  grid-area: sidebar;
   margin: 0 auto;
+  font-family: 'Agave NerdFont';
+  gap: 1rem;
 }
 
 .sidebarButton {
   margin: 0.2rem 0;
   padding: 0.1rem;
-  color: var(--text-color);
+  color: var(--text);
   text-decoration: none;
 }
 
 .sidebarButton.activeSideButton {
-  color: var(--link-color);
+  color: var(--peach);
   font-weight: bold;
-  background-color: var(--foreground);
 }
 
 .side-button-h1 {
@@ -37,6 +35,8 @@
 
 .tocTitle {
   align-self: center;
+  color: var(--yellow);
+  margin: 0;
 }
 
 .tocItems {
@@ -48,9 +48,9 @@
 
 .outline {
   height: 2px;
-  background-color: var(--delim-color);
+  background-color: var(--mauve);
   width: 100%;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 
 @media screen and (max-width: 768px) {

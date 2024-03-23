@@ -1,5 +1,7 @@
 import BlogHeader from "@/components/blogHeader/BlogHeader";
-import Header from "@/components/header/Header";
+import FileExplorer from "@/components/fileExplorer/FileExplorer";
+import { getAllPostsMetadata } from "@/lib/posts";
+import styles from "./blogpage.module.css";
 
 export const metadata: { title: string; description: string } = {
   title: "Marguino",
@@ -12,9 +14,12 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
 
+  const postMetadata = getAllPostsMetadata();
+
   return (
-        <div className="blog-layout">
+        <div className={styles.blogLayout}>
           <BlogHeader/>
+          <FileExplorer data={postMetadata} />
         {children}
         </div>
   );

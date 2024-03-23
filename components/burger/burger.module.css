@@ -13,10 +13,9 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.burgerContainer {
-  position: relative;
+.fitSvg {
+  height: fit-content;
 }
-
 .open {
   max-height: 100vh;
 }

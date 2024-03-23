@@ -8,6 +8,7 @@ tags: organisation, notes, obsidian
 growth: 1
 sidebar: false
 related: obsidian, sketch-with-ipad
+category: Knowledge organisation
 ---
 # The art of taking notes
 

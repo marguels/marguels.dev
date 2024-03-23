@@ -16,6 +16,7 @@
     "katex": "^0.16.9",
     "kbar": "^0.1.0-beta.44",
     "next": "14.0.2",
+    "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
     "react-force-graph-2d": "^1.25.2",

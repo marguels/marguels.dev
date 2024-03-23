@@ -3,21 +3,21 @@ import PostCard from "@/components/postCard/PostCard";
 import Link from "next/link";
 import styles from "./blogpage.module.css";
 import NetworkGraph from "@/components/networkGraph/NetworkGraph";
-import BlogNav from "@/components/blogNav/BlogNav";
 
 export default async function BlogPage() {
   const postMetadata = getAllPostsMetadata();
   const graphData = await getGraphData();
+
   const tags: string[] = [];
   const postPreviews = postMetadata.map((post) => {
     tags.push(...post.tags);
     return <PostCard key={post.slug} post={post} />;
   });
   const uniqueTags = [...new Set(tags)];
+
   return (
     <div className={styles.contentLayout}>
-      <BlogNav />
-      <div className={styles.mainContent}>
+      <div className={styles.blogPageContent}>
         <div className={styles.blogDescription}>
           <h1 className="blog-title">
             Connecting the <span className="accent">Dots</span>

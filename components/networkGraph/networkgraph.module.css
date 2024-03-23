@@ -1,17 +1,14 @@
 .graphContainer {
-    position: sticky;
-    top: 25vh;
     width: 250px;
     height: 250px;
-    background-color: var(--foreground);
+    background-color: var(--mantle);
     border-radius: 2%;
     margin-left: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgba(74, 73, 91, 0.6);
-    grid-area: graph;
-}
+    border: 1px solid var(--blue);
+  }
 
 .graph {
     max-width: 100%;
@@ -22,6 +19,7 @@
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 0;
+    color: var(--blue);
 }
 
 @media screen and (max-width: 768px) {

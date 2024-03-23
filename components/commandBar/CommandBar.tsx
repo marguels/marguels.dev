@@ -16,10 +16,6 @@ import styles from "./commandbar.module.css";
 const CommandBar = () => {
   const { visualState } = useKBar((state) => state);
 
-  useEffect(() => {
-    console.log(visualState);
-  }, [visualState]);
-
   return (
     <>
     {visualState !== VisualState.hidden && <div className={styles.backdrop}></div>}

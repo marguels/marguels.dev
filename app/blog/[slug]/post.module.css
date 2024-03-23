@@ -1,0 +1,71 @@
+.postContainer {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 0.8fr 2.5fr 1fr;
+    grid-template-areas: "files main explorer";
+    max-width: 1440px;
+    margin: 4rem auto;
+    height: 100%;
+  }
+  
+  .postContainer > article {
+    align-self: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .postContainer {
+        display: grid;
+        grid-template-columns: 0.5fr 2.5fr 0.5fr;
+    }
+  }
+
+  .fileExplorer {
+    grid-area: files;
+    width: 300px;
+  }
+
+  .postContent {
+    padding: 1rem 4rem;
+    max-width: 800px;
+    margin: auto;
+    grid-area: main;
+    top: 10vh;
+    align-items: center;
+  }
+
+.postTitle {
+    color: var(--mauve);
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  .postMetadata {
+    color: var(--subtext-0);
+  }
+
+  .postMetadata h3 {
+    margin: 0.5rem 0;
+  }
+
+.contentExplorer {
+  grid-area: explorer;
+  top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  height: fit-content;
+}
+
+.tocContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 60vh;
+  max-width: 250px;
+  margin: 0 auto;
+  font-family: 'Agave NerdFont';
+}
+

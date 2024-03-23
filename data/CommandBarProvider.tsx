@@ -57,7 +57,7 @@ const CommandBarProvider: React.FC<CommandBarProviderProps> = ({
       keywords: "back",
       section: "Navigation",
       perform: () => navigate("/"),
-      icon: <FaHome />,
+      icon: <div className="kbar-icon"></div>,
     },
     {
       id: "blogAction",
@@ -65,7 +65,7 @@ const CommandBarProvider: React.FC<CommandBarProviderProps> = ({
       shortcut: ["b"],
       keywords: "blog dots articles",
       section: "Navigation",
-      icon: <FaBook />,
+      icon: <div className="kbar-icon"></div>,
       perform: () => navigate("/blog"),
     },
     {
@@ -74,7 +74,7 @@ const CommandBarProvider: React.FC<CommandBarProviderProps> = ({
       shortcut: ["g"],
       keywords: "sourcecode",
       section: "Navigation",
-      icon: <FaGithub />,
+      icon: <div className="kbar-icon"></div>,
       perform: () => window.open("https://github.com/marguels", "_blank"),
     },
     {
@@ -83,7 +83,7 @@ const CommandBarProvider: React.FC<CommandBarProviderProps> = ({
       shortcut: ["?"],
       keywords: "search articles notes",
       section: "Digital garden",
-      icon: <FaSearch />,
+      icon: <div className="kbar-icon"></div>,
     },
   ];
 

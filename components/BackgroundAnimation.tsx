@@ -27,11 +27,11 @@ const BackgroundAnimation = () => {
         height: "100%",
       }}
       options={{
-        background: {
-          color: {
-            value: "#ffffff",
-          },
-        },
+        // background: {
+        //   color: {
+        //     value: "#ffffff",
+        //   },
+        // },
         fpsLimit: 120,
         interactivity: {
           detect_on: "window",

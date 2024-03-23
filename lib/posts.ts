@@ -60,6 +60,7 @@ export const getAllPostsMetadata = () : PostMetadata[] => {
       growth: matterResult.data.growth,
       slug: fileName.replace(".md", ""),
       tags: tags || [],
+      category: matterResult.data.category,
     };
   });
   return posts;
@@ -82,6 +83,7 @@ export const getPostMetadataBySlug = (slug: string) : PostMetadata | null | unde
         growth: matterResult.data.growth,
         slug: slug,
         tags: tags || [],
+        category: matterResult.data.category,
       };
   } catch (error) {
     if(error instanceof Error) {

@@ -24,10 +24,10 @@ const BlogHeader = () => {
             Connecting the <span className="accent">Dots</span>
           </h1>
         </Link>
-        <nav className={styles.burgerContainer}>
+        <>
           <Burger isOpen={isOpen} toggleMenu={toggleMenu} grid={true} />
           <Menu isOpen={isOpen} closeMenu={closeMenu}/>
-        </nav>
+        </>
       </div>
       <ScrollProgress />
     </header>
