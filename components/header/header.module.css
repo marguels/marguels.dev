@@ -1,20 +1,13 @@
 .headerContainer {
   background-color: var(--crust);
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 3;
-  height: 60px;
-  padding-top: 20px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-}
-
-.headerContainer::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: var(--lavender);
+  justify-content: center;
 }
 
 .navbar {

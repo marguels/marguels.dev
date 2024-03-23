@@ -33,12 +33,12 @@ const Header = () => {
           </div>
           <ul>
             <li>
-              <Link href="/#about" className="link">
+              <Link href="/about" className="link">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/#experience" className="link">
+              <Link href="/about#experience" className="link">
                 Experience
               </Link>
             </li>

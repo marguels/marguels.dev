@@ -1,8 +1,9 @@
 import { getAllPostsMetadata } from "@/lib/posts";
 import PostCard from "@/components/postCard/PostCard";
-import Link from "next/link";
+import styles from "./about.module.css";
+import Header from "@/components/header/Header";
 
-export default function ProgrammingPage() {
+export default function AboutPage() {
   const postMetadata = getAllPostsMetadata();
   const tags: string[] = [];
   const postPreviews = postMetadata.map((post) => {
@@ -11,10 +12,11 @@ export default function ProgrammingPage() {
   });
 
   return (
-    <div className="blog-container">
+    <div className={styles.aboutContainer}>
+      <Header />
       <div className="blog-intro">
         <h1 className="blog-title">
-          Programming
+          About
         </h1>
         <div className="blog-description">
           <p>Welcome to my digital garden 🌱</p>
