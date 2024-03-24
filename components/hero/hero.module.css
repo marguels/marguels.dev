@@ -1,13 +1,11 @@
 .heroContainer {
   display: flex;
-  place-items: center; /* centers items both horizontally and vertically */
-  height: 90vh; /* adjust as needed */
-  overflow: hidden;
-  position: relative;
+  place-items: center;
+  height: calc(100vh - 155px);
+  position: sticky;
   margin: 0;
   padding: 0;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .backgroundAnimation {
@@ -20,12 +18,10 @@
 }
 
 .heroContent {
-  /* background-color: var(--background); */
   display: flex;
   flex-direction: column;
   width: 80%;
   position: relative;
-  /* z-index: 1; */
   align-items: center;
 }
 

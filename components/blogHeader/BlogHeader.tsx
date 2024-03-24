@@ -4,7 +4,7 @@ import styles from "./blogHeader.module.css";
 import Link from "next/link";
 import Burger from "../burger/Burger";
 import Menu from "../burger/Menu";
-import ScrollProgress from "../header/ScrollProgress";
+import ScrollProgress from "./ScrollProgress";
 
 const BlogHeader = () => {
   const [isOpen, setIsOpen] = useState(false);

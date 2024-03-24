@@ -1,5 +1,5 @@
 "use client";
-import styles from "./header.module.css";
+import styles from "./blogHeader.module.css";
 import { useEffect } from "react";
 
 export default function ScrollProgress() {

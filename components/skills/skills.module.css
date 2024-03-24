@@ -1,0 +1,89 @@
+.skillsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.experience {
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.sectionTitle {
+    margin: 1rem;
+    font-size: 38px;
+    color: var(--yellow);
+  }
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+  }
+
+.iconContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--teal);
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px var(--blue);
+    background-color: var(--mantle);
+}
+
+.iconContainer:hover {
+    color: var(--pink);
+}
+
+.iconContainer:focus {
+    color: var(--yellow);
+    outline: none;
+}
+
+.writing {
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+.cvButton {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: var(--peach);
+    border: var(--yellow) 2px solid;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.cvButton:hover {
+    color: var(--mauve);
+    border: var(--blue) 2px solid;
+}
+
+@media screen and (max-width: 768px) {
+    .skillsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .skillsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .skillsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}

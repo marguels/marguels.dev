@@ -1,9 +1,22 @@
 .aboutContainer {
   min-height: 70vh;
-  max-width: 80%;
-  z-index: 1;
-  background-color: var(--base);
-  padding: 2rem;
+  max-width: 800px;
+}
+
+.sectionTitle {
+  margin: 1rem;
+  font-size: 38px;
+  color: var(--mauve);
+}
+
+.aboutTitle {
+  margin-bottom: 1rem;
+  color: var(--pink);
+}
+
+.aboutText {
+  text-align: justify;
+  margin: 0 0 2rem 0;
 }
 
 .picture {

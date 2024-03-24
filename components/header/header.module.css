@@ -20,13 +20,6 @@
   align-items: center;
 }
 
-.scrollbar {
-  height: 3px;
-  background-color: var(--mauve);
-  width: 0;
-  position: relative;
-}
-
 .title {
   padding: 0.2rem 0.8rem;
 }

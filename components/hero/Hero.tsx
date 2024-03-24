@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "./hero.module.css";
 import Link from "next/link";
-import BackgroundAnimation from "../BackgroundAnimation";
 
 interface Props {
   title: string;
@@ -13,9 +12,6 @@ interface Props {
 const Hero = () => {
   return (
     <section className={styles.heroContainer}>
-      <div className={styles.backgroundAnimation}>
-        <BackgroundAnimation />
-      </div>
       <div className={styles.heroContent}>
         <h1>
           Hi, I'm <b className="accent">Margherita</b>!

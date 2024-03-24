@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
 import styles from "./header.module.css";
-import ScrollProgress from "./ScrollProgress";
 import Link from "next/link";
 import Burger from "../burger/Burger";
-import Menu from "../burger/Menu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +48,6 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <ScrollProgress />
     </header>
   );
 };

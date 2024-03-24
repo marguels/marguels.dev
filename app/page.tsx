@@ -1,14 +1,16 @@
-import About from "@/components/about/About";
+"use client"
+import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
       <Header/>
-      <Hero />
-      {/* <About /> */}
+      <div className="backgroundAnimation">
+        <BackgroundAnimation />
+      </div>
+        <Hero />
     </main>
   )
 }
