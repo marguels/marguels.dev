@@ -19,7 +19,7 @@
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 0;
-    color: var(--blue);
+    color: var(--pink);
 }
 
 @media screen and (max-width: 768px) {

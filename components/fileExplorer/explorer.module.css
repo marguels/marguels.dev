@@ -1,15 +1,40 @@
-
 .blogNav {
-    /* border-right: solid 1px black; */
-    top: 20px;
-    min-width: 300px;
-    width: 300px;
-    padding-top: 3rem;
-    color: var(--text);
-    background-color: var(--crust);
-    font-family: 'Agave NerdFont', sans-serif;
-    position: fixed;
-    height: 100%;
+  top: 20px;
+  min-width: 300px;
+  width: 300px;
+  padding-top: 3rem;
+  color: var(--text);
+  background-color: var(--crust);
+  font-family: 'Agave NerdFont', sans-serif;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.toggleButton {
+  position: fixed;
+  top: 50%; 
+  left: 270px;
+  z-index: 9;
+  font-family: 'Agave NerdFont';
+  font-size: x-large;
+  transition: transform 0.3s ease;
+  background: none;
+  color: var(--pink);
+  border: none;
+}
+
+.close .toggleButton {
+  left: 0;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.close {
+  transform: translateX(-250px);
 }
 
 .navTitle {

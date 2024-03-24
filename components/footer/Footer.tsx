@@ -1,6 +1,3 @@
-import GitHubIcon from "../icons/GitHubIcon";
-import IconLinkedin from "../icons/LinkedInIcon";
-import IconMail from "../icons/MailIcon";
 import styles from "./footer.module.css";
 import Link from "next/link";
 
