@@ -10,7 +10,7 @@ category: Thoughts
 
 A Memex is a hypotetical device thought to interact with microform documents, introduced in [Vannevar Bush](https://en.wikipedia.org/wiki/Vannevar_Bush "Vannevar Bush")'s 1945 article "[As We May Think](https://en.wikipedia.org/wiki/As_We_May_Think "As We May Think")". Its name comes from the union of the words *mem*ory and *ex*perience.
 
-From Wikipedia:
+From the Memex Wikipedia page:
 > Bush envisioned the memex as a device in which individuals would compress and store all of their books, records, and communications, "mechanized so that it may be consulted with exceeding speed and flexibility". The individual was supposed to use the memex as an automatic personal [filing system](https://en.wikipedia.org/wiki/Filing_cabinet "Filing cabinet"), making the memex "an enlarged intimate supplement to his memory"
 
 Basically, what I'm trying to do by [[building a second brain]].
