@@ -107,13 +107,6 @@ h1 {
   height: calc(100vh - var(300px));
 }
 
-/* .mainContent::after {
-  content: '';
-  display: block;
-  flex: 1;
-  height: 150px;
-} */
-
 main {
   flex: 1;
   width: 100%;
