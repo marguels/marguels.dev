@@ -8,6 +8,8 @@ sidebar: true
 category: Thoughts
 ---
 
+# What is a Memex?
+
 A Memex is a hypotetical device thought to interact with microform documents, introduced in [Vannevar Bush](https://en.wikipedia.org/wiki/Vannevar_Bush "Vannevar Bush")'s 1945 article "[As We May Think](https://en.wikipedia.org/wiki/As_We_May_Think "As We May Think")". Its name comes from the union of the words *mem*ory and *ex*perience.
 
 From the Memex Wikipedia page:
@@ -18,6 +20,7 @@ Basically, what I'm trying to do by [[building a second brain]].
 My inner child here giggles at the fact that this is called Meme(x), and I love learning about it in this era. Because this makes the perfect desecrating analogy to what LLMs actually are.
 Truth be told, I'd love to have a peek into the future and see which meme will condense and desecrate this capital-inflated hype around LLMs.
 
+# LLMs and the marketing of AI
 As Daniel Stenberg put it in this article, [The I in LLMs stands for intelligence](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/). You need to take just a glance at the principles behind LLMs, constructed to predict the *next* most probable word to say, to realise how misleading and reductive is calling _this_ AI. AI is many other things already out there, and they can't be put in the LLM box.
 
 Yes, it's impressive that we tricked rocks into talking.
